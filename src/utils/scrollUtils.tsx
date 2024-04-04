@@ -4,7 +4,7 @@ export function hasScrolledToPixel(targetPixel: number) {
 
 export const getMaxScroll = () => {
   if (window.innerWidth < 760) {
-    return 357;
+    return 310;
   } else if (window.innerWidth < 1024) {
     return 537;
   } else {
