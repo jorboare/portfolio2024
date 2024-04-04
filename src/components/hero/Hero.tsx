@@ -37,7 +37,7 @@ const Hero = () => {
           show ? "w-full opacity-100" : "w-0 opacity-0"
         } h-[1px] w-full m-auto bg-primary mb-8 mt-1 transition-all duration-500`}
       />
-      <div className="w-full sm:h-[220px] md:h-[400px] lg:h-[500px] relative overflow-hidden">
+      <div className="w-full sm:h-[180px] md:h-[400px] lg:h-[500px] relative overflow-hidden">
         <h1 className="text-[200px] font-accent p-0 m-0 text-primary z-30 leading-[10rem] sm:text-6xl md:text-[150px] lg:text-[200px]">
           Hi. <span className="block m-0 p-0">I'm Jordi.</span>
         </h1>
