@@ -45,25 +45,25 @@ const Clock = () => {
         <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2  z-10">
           <div
             id="hour"
-            className=" w-[230px] h-[230px] rounded-full  border-primary border-2 crop-circle"
+            className=" w-[230px] h-[230px] rounded-full  border-primary sm:border md:border-2 crop-circle"
           ></div>
 
           <div className="absolute top-[40%] left-[60%] -translate-x-1/2 -translate-y-1/2  z-[15]">
             <div
               id="minute"
-              className="w-[150px] h-[150px] rounded-full  border-primary border-2 crop-circle"
+              className="w-[150px] h-[150px] rounded-full  border-primary sm:border md:border-2 crop-circle"
             ></div>
           </div>
           <div className="absolute top-[35%] left-[65%] -translate-x-1/2 -translate-y-1/2  z-[20]">
             <div
               id="second"
-              className="w-[100px] h-[100px] rounded-full  border-primary border-2 crop-circle"
+              className="w-[100px] h-[100px] rounded-full  border-primary sm:border md:border-2 crop-circle"
             ></div>
           </div>
           <div className="absolute top-[30%] left-[70%] -translate-x-1/2 -translate-y-1/2 z-[25]">
             <div
               id="millisecond"
-              className="w-[50px] h-[50px] rounded-full  border-primary border-2 crop-circle-big-gap"
+              className="w-[50px] h-[50px] rounded-full  border-primary sm:border md:border-2 crop-circle-big-gap"
             ></div>
           </div>
         </div>
