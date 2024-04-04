@@ -1,0 +1,43 @@
+import "./App.css";
+import About from "./components/about/About";
+import Hero from "./components/hero/Hero";
+import { useEffect, useState } from "react";
+import Navbar from "./layout/navbar/Navbar";
+import { hasScrolledToPixel, getMaxScroll } from "./utils/scrollUtils";
+function App() {
+  const [aboutReached, setAboutReached] = useState(false);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("showEl");
+      } else {
+        entry.target.classList.remove("showEl");
+      }
+    });
+  });
+
+  useEffect(() => {
+    const checkPosition = () => {
+      setAboutReached(hasScrolledToPixel(getMaxScroll()));
+    };
+    window.addEventListener("scroll", checkPosition);
+    const hiddenElements = document.querySelectorAll(".hiddenEl");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+  return (
+    <>
+      <div
+        id="home"
+        className={`${
+          aboutReached ? "my-10 mx-0 px-[90px] " : "m-10 px-[50px]"
+        } bg-background pt-10 rounded-xl shadow-lg transition-all duration-1000`}
+      >
+        <Hero></Hero>
+        <Navbar></Navbar>
+        <About></About>
+      </div>
+    </>
+  );
+}
+
+export default App;
