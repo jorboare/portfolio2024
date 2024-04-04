@@ -34,6 +34,14 @@ export default {
           transition:
             "width 0.5s ease, heigth 0.5s ease, background 0.5s ease, border 0.1s ease, border-radius 0.5s ease",
         },
+        ".crop-circle": {
+          "clip-path":
+            "polygon(0% 0%, 44% 0%, 44% 5%,56% 5%, 56% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        },
+        ".crop-circle-big-gap": {
+          "clip-path":
+            "polygon(0% 0%, 40% 0%, 40% 5%,60% 5%, 60% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        },
       });
     },
   ],

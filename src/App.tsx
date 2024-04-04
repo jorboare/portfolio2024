@@ -29,7 +29,7 @@ function App() {
       <div
         id="home"
         className={`${
-          aboutReached ? "my-10 mx-0 px-[90px] " : "m-10 px-[50px]"
+          aboutReached ? "my-10 mx-0 px-10 " : "m-10 sm:px-[25px] md:px-[50px]"
         } bg-background pt-10 rounded-xl shadow-lg transition-all duration-1000`}
       >
         <Hero></Hero>

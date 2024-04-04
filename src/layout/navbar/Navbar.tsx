@@ -44,7 +44,7 @@ const Navbar = () => {
             : isSticky
             ? "fixed top-0 left-1/2 -translate-x-1/2 py-2 bg-custom mt-2 rounded-3xl border-b-0"
             : "absolute sm:top-[357px] md:top-[537px] lg:top-[650px] border-b left-1/2 -translate-x-1/2 py-3"
-        } border-primary md:w-[80%] lg:w-[80%] transition-noTransform`}
+        } border-primary md:w-[80%] lg:w-[80%] transition-noTransform z-50`}
       >
         {mobile ? (
           <div className="w-6 h-[2px] bg-primary  after:absolute after:top-[5px] after:w-6 after:h-[2px] after:bg-primary before:absolute before:-top-[5px] before:w-6 before:h-[2px] before:bg-primary cursor-pointer" />
