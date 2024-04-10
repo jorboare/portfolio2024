@@ -84,9 +84,10 @@ const Experience = () => {
         ></div>
       </div>
       <div className="grid grid-cols-2 grid-rows-8 text-primary sm:gap-3 md:gap-0">
-        {experiences.map((e, idx) => (
-          <ExperienceCard key={idx} {...e} index={idx} />
-        ))}
+        {experiences.length &&
+          experiences.map((e, idx) => (
+            <ExperienceCard key={idx} {...e} index={idx + 1} />
+          ))}
       </div>
     </>
   );
