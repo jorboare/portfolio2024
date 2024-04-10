@@ -4,6 +4,9 @@ import Hero from "./components/hero/Hero";
 import { useEffect, useState } from "react";
 import Navbar from "./layout/navbar/Navbar";
 import { hasScrolledToPixel, getMaxScroll } from "./utils/scrollUtils";
+import Contact from "./components/contact/Contact";
+import Experience from "./components/experience/Experience";
+import Projects from "./components/projectsComp/Projects";
 function App() {
   const [aboutReached, setAboutReached] = useState(false);
   const observer = new IntersectionObserver((entries) => {
@@ -35,6 +38,9 @@ function App() {
         <Hero></Hero>
         <Navbar></Navbar>
         <About></About>
+        <Experience></Experience>
+        <Projects></Projects>
+        <Contact></Contact>
       </div>
     </>
   );

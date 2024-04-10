@@ -1,0 +1,70 @@
+/* TRANSITIONS & ANIMATIONS */
+
+/* 
+      keyframes: {
+        fadeInLeft: {
+          "0%": { opacity: 0, transform: "translateX(20px)" },
+          "100%": { opacity: 1, transform: "translateX(0px)" },
+        },
+        fadeInRight: {
+          "0%": { opacity: 0, transform: "translateX(-20px)" },
+          "100%": { opacity: 1, transform: "translateX(0px)" },
+        },
+      },
+      animation: {
+        fadeInLeft: "fadeInLeft 1s ease-in-out",
+        fadeInRight: "fadeInRight 1s ease-in-out",
+      }, */
+
+.fadeInLeft {
+  animation: fadeInLeft 0.5s ease-in-out;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 50%;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.gradient-photo {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura de ejemplo */
+  background-image: url("./assets/experienceImg.jpg"); /* URL de tu imagen */
+  background-size: cover; /* Ajustar imagen al tamaño del contenedor */
+  background-position: center; /* Posición de la imagen */
+  background-repeat: no-repeat;
+  position: relative; /* Para posicionar el gradiente */
+}
+
+.gradient-photo::after {
+  content: ""; /* Contenido generado */
+  position: absolute; /* Posicionamiento absoluto */
+  top: -5px;
+  left: -5px;
+  width: 102%;
+  height: 102%;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.2) -2%,
+    #2b2b2b 60%
+  ); /* Máscara radial */
+  pointer-events: none; /* Ignorar eventos de ratón */
+}

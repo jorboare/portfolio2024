@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getMaxScroll, hasScrolledToPixel } from "../../utils/scrollUtils";
+//@ts-ignore
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -21,19 +23,6 @@ const Navbar = () => {
     checkPosition();
   }, []);
 
-  const scrollToTarget = (id: string, offset: number) => {
-    const targetElement = document.getElementById(id);
-    const yOffset = -offset; // Ajuste opcional de compensación de desplazamiento, si es necesario
-    if (targetElement) {
-      let y =
-        targetElement.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <div
@@ -51,33 +40,73 @@ const Navbar = () => {
         ) : (
           <ul className="flex gap-2 justify-center text-primary">
             <li>
-              <a href="#" onClick={() => scrollToTarget("home", 50)}>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             ·
             <li>
-              <a href="#" onClick={() => scrollToTarget("about", 50)}>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
                 About me
-              </a>
+              </Link>
             </li>
             ·
             <li>
-              <a href="#" onClick={() => scrollToTarget("experience", 50)}>
+              <Link
+                activeClass="active"
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
                 Experience
-              </a>
+              </Link>
             </li>
             ·
             <li>
-              <a href="#" onClick={() => scrollToTarget("projects", 50)}>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
                 Projects
-              </a>
+              </Link>
             </li>
             ·
             <li>
-              <a href="#" onClick={() => scrollToTarget("contact", 50)}>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         )}
