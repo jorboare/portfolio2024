@@ -42,13 +42,13 @@ const ExperienceCard: React.FC<CardProps> = (props) => {
               : "col-start-1 ml-auto mr-3 text-right"
           } row-start-${index} relative z-40 w-auto p-4 border-[3px] border-secondaryBg rounded-lg bg-opacity-10 bg-white experienceEl verticalRotate`}
         >
-          <div
+          {/* <div
             className={`${
               pos === "right" ? "left-[-15px]" : "right-[-15px]"
             } absolute top-1/2 -translate-y-1/2 w-3 h-[4px] bg-primary ${
               "line" + index
             }`}
-          ></div>
+          ></div> */}
           <p className="font-accent text-3xl opacity-75">{year}</p>
           <h4
             className={`${

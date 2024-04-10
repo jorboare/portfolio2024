@@ -83,7 +83,7 @@ const Experience = () => {
           className="transition-width absolute sm:left-0 md:left-1/2 top-full -translate-x-1/2 -tranlate-y-1/2 w-[1px] bg-primary z-40"
         ></div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-8 text-primary sm:gap-3 md:gap-0">
+      <div className="grid grid-cols-2 grid-rows-8 text-primary sm:gap-3 md:gap-1">
         {experiences.length &&
           experiences.map((e, idx) => (
             <ExperienceCard key={idx} {...e} index={idx + 1} />
