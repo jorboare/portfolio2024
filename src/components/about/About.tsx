@@ -6,29 +6,20 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" relative grid grid-cols-12 grid-rows-2 gap-1 w-full sm:h-[400px] md:h-[500px] lg:h-[600px] pt-0 sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px] sm:mb-5 md:mb-[0px] sm:border-t-[1px] sm:border-primary md:border-t-0 lg:border-t-0"
+      className=" relative grid w-full grid-cols-12 grid-rows-2 gap-1 pt-0 sm:mb-5 sm:mt-[0px] sm:h-[400px] sm:border-t-[1px] sm:border-primary sm:pt-14 md:mb-[0px] md:mt-[50px] md:h-[500px] md:border-t-0 lg:mt-[120px] lg:h-[600px] lg:border-t-0"
     >
-      <div className="row-span-2 sm:col-span-12 md:col-span-4 md:min-w-52 md:min-h-52">
+      <div className="row-span-2 sm:col-span-12 md:col-span-4 md:min-h-52 md:min-w-52">
         <img
-          className="fadeInRight sm:w-[150px] sm:h-[150px]  md:w-[250px] md:h-[250px] lg:w-[320px] lg:h-[320px] object-cover m-auto object-bottom rounded-full"
+          className="m-auto rounded-full object-cover  object-bottom fadeInRight sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] lg:h-[320px] lg:w-[320px]"
           src={ProfileImg}
           alt="Profile image"
         />
-        {/* <ReactVivus
-          id="arrow"
-          option={{
-            file: Arrow,
-            animTimingFunction: "EASE-IN-OUT",
-            type: "oneByOne",
-            duration: 30,
-          }}
-        /> */}
       </div>
-      <div className="sm:col-span-12 md:col-span-8 z-50">
-        <h1 className="fadeInLeft transition-view col-span-12 sm:text-center md:text-right font-accent p-0 text-primary leading-[10rem] sm:text-5xl md:text-[150px]">
+      <div className="z-40 sm:col-span-12 md:col-span-8">
+        <h1 className="fadeInLeft transition-view col-span-12 p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-right md:text-[120px] lg:text-[150px]">
           <span className="text-secondary">A</span>bout Me
         </h1>
-        <p className="fadeInLeft text-primary sm:text-lg md:text-2xl font-primary z-50 max-w-[700px] ml-auto">
+        <p className="fadeInLeft z-40 ml-auto max-w-[700px] font-primary text-primary sm:text-lg md:text-2xl">
           +3 years experienced front-end developer from Spain based in
           Amsterdam. Keeping up with beautiful visuals, great design and solid
           code.
@@ -36,10 +27,10 @@ const About = () => {
       </div>
       <img
         src={Arrow}
-        className="sm:hidden md:visible fadeInRight row-start-3 col-start-4 col-span-1 w-14 ml-auto"
+        className="col-span-1 col-start-4 row-start-3 ml-auto w-14 fadeInRight sm:hidden md:visible"
       />
-      <div className="sm:hidden md:visible row-start-3 col-span-5 col-start-5">
-        <p className="fadeInRight font-handwrite w-full m-0 p-0 ml-2 mt-8 text-primary text-3xl sm:hidden md:block ">
+      <div className="col-span-5 col-start-5 row-start-3 sm:hidden md:visible">
+        <p className="m-0 ml-2 mt-8 w-full p-0 font-handwrite text-3xl text-primary fadeInRight sm:hidden md:block ">
           I also love hiking, nature and sports!
         </p>
       </div>

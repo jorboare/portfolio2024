@@ -30,19 +30,19 @@ const Hero = () => {
 
   return (
     <div>
-      <h3 className="text-primary text-lg m-0 p-0 w-full text-center">
+      <h3 className="m-0 w-full p-0 text-center text-lg text-primary">
         Frontend Developer
       </h3>
       <div
         className={`${
           show ? "w-full opacity-100" : "w-0 opacity-0"
-        } h-[1px] w-full m-auto bg-primary mb-8 mt-1 transition-all duration-500`}
+        } m-auto mb-8 mt-1 h-[1px] w-full bg-primary transition-all duration-500`}
       />
-      <div className="w-full sm:h-[180px] md:h-[400px] lg:h-[500px] relative overflow-hidden z-50">
-        <h1 className="text-[200px] font-accent p-0 m-0 text-primary z-30 leading-[10rem] sm:text-6xl md:text-[150px] lg:text-[200px]">
-          Hi. <span className="block m-0 p-0">I'm Jordi.</span>
+      <div className="relative z-40 w-full overflow-hidden sm:h-[180px] md:h-[400px] lg:h-[500px]">
+        <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[200px]">
+          Hi. <span className="m-0 block p-0">I'm Jordi.</span>
         </h1>
-        <h2 className="font-primary p-0 m-0 text-primary z-30 sm:text-1xl md:text-[50px] lg:text-[70px]">
+        <h2 className="sm:text-1xl z-30 m-0 p-0 font-primary text-primary md:text-[50px] lg:text-[70px]">
           I build things for the{" "}
           <span id="webSpan" className="md:text-[48px] lg:text-[68px]">
             web
