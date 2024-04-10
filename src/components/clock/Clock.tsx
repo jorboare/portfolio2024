@@ -40,7 +40,7 @@ const Clock = () => {
       element.style.transform = `rotate(${milEquiv * milliseconds}deg)`;
   }, [milliseconds]);
   return (
-    <div className="absolute right-0 top-0 w-[300px] h-[300px] flex justify-center items-center opacity-75">
+    <div className="absolute right-0 top-0 w-[300px] h-[300px] flex justify-center items-center opacity-75 z-0">
       <div className="w-[250px] h-[250px]">
         <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2  z-10">
           <div

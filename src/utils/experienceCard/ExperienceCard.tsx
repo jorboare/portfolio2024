@@ -21,6 +21,10 @@ const ExperienceCard: React.FC<CardProps> = ({
     if (window.innerWidth < 768) {
       setPos("right");
     }
+
+    window.addEventListener("resize", () =>
+      setPos((index + 1) % 2 ? "left" : "right")
+    );
   }, []);
   return (
     <>
@@ -48,17 +52,21 @@ const ExperienceCard: React.FC<CardProps> = ({
         >
           {title}
         </h4>
-        <h4
-          className={`${subtitle ? "visible" : "hidden"} font-accent text-3xl`}
-        >
-          {subtitle}
-        </h4>
+        {subtitle && (
+          <h4
+            className={`${
+              subtitle ? "visible" : "hidden"
+            } font-accent text-3xl`}
+          >
+            {subtitle}
+          </h4>
+        )}
         <p className="text-lg opacity-90">{text}</p>
         {icon && (
           <img
             src={icon}
             alt="Airplane Icon"
-            className="absolute top-1/2 left-[-70px] -translate-y-1/2 w-10"
+            className="absolute top-1/2 left-[-70px] -translate-y-1/2 w-10 sm:invisible md:visible"
           />
         )}
       </div>

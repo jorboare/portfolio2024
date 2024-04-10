@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" relative grid grid-cols-12 grid-rows-3 gap-1 w-full h-[600px] pt-0 sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px] sm:border-t-[1px] sm:border-primary md:border-t-0 lg:border-t-0"
+      className=" relative grid grid-cols-12 grid-rows-2 gap-1 w-full sm:h-[400px] md:h-[500px] lg:h-[600px] pt-0 sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px] sm:mb-5 md:mb-[0px] sm:border-t-[1px] sm:border-primary md:border-t-0 lg:border-t-0"
     >
       <div className="row-span-2 sm:col-span-12 md:col-span-4 md:min-w-52 md:min-h-52">
         <img
@@ -26,11 +26,11 @@ const About = () => {
       </div>
       <div className="sm:col-span-12 md:col-span-8 z-50">
         <h1 className="fadeInLeft transition-view col-span-12 sm:text-center md:text-right font-accent p-0 text-primary leading-[10rem] sm:text-5xl md:text-[150px]">
-          About Me
+          <span className="text-secondary">A</span>bout Me
         </h1>
         <p className="fadeInLeft text-primary sm:text-lg md:text-2xl font-primary z-50 max-w-[700px] ml-auto">
           +3 years experienced front-end developer from Spain based in
-          Amsterdam. Keeping up with astonishing visuals, great design and solid
+          Amsterdam. Keeping up with beautiful visuals, great design and solid
           code.
         </p>
       </div>

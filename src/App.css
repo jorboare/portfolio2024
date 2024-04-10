@@ -45,8 +45,6 @@
 }
 
 .gradient-photo {
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Altura de ejemplo */
   background-image: url("./assets/experienceImg.jpg"); /* URL de tu imagen */
   background-size: cover; /* Ajustar imagen al tamaño del contenedor */
   background-position: center; /* Posición de la imagen */
@@ -57,14 +55,15 @@
 .gradient-photo::after {
   content: ""; /* Contenido generado */
   position: absolute; /* Posicionamiento absoluto */
-  top: -5px;
-  left: -5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 102%;
   height: 102%;
   background-image: radial-gradient(
     circle at center,
     rgba(0, 0, 0, 0.2) -2%,
-    #2b2b2b 60%
+    #2b2b2b 48%
   ); /* Máscara radial */
   pointer-events: none; /* Ignorar eventos de ratón */
 }
