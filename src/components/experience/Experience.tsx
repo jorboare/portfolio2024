@@ -24,7 +24,6 @@ const Experience = () => {
       if (e) {
         const element = e as HTMLElement;
         const elementData = element.getBoundingClientRect();
-
         const objPosY = elementData.top + elementData.height / 2; //tracks the distance to the top from the middle of the element
 
         if (objPosY <= thirdHeight) {
@@ -65,14 +64,14 @@ const Experience = () => {
     <>
       <div
         id="experience"
-        className="relative grid grid-cols-12 grid-rows-3 gap-1 w-full sm:h-[300px] md:h-[400px] pt-0 sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px]"
+        className="relative w-full sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px]"
       >
         <div className="fadeInRight absolute sm:w-full md:w-2/3 h-full md:h-[500px] lg:h-[600px] sm:top-0 md:-top-1/2 right-0 z-0 gradient-photo"></div>
         <div className="sm:col-span-12 md:col-span-8 z-40">
-          <h1 className="fadeInLeft  col-span-12 sm:text-center md:text-right font-accent p-0 text-primary leading-[10rem] sm:text-5xl md:text-[150px]  z-0">
+          <h1 className="fadeInLeft  col-span-12 sm:text-center md:text-center font-accent p-0 text-primary leading-[10rem] sm:text-5xl md:text-[150px]  z-0">
             <span className="text-secondary">E</span>xperience
           </h1>
-          <p className="fadeInLeft z-50 text-primary sm:text-lg md:text-xl lg:text-2xl font-primary max-w-[700px] ml-auto">
+          <p className="fadeInLeft z-50 text-primary sm:text-lg md:text-xl lg:text-2xl font-primary max-w-[700px] mr-auto">
             With experience spanning both front-end and back-end development, my
             expertise lies in crafting visually compelling experiences using
             React.
@@ -83,7 +82,7 @@ const Experience = () => {
           className="transition-width absolute sm:left-0 md:left-1/2 top-full -translate-x-1/2 -tranlate-y-1/2 w-[1px] bg-primary z-40"
         ></div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-8 text-primary sm:gap-3 md:gap-1">
+      <div>
         {experiences.length &&
           experiences.map((e, idx) => (
             <ExperienceCard key={idx} {...e} index={idx + 1} />
