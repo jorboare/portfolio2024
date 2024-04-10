@@ -67,7 +67,7 @@ const Experience = () => {
         id="experience"
         className="relative grid grid-cols-12 grid-rows-3 gap-1 w-full sm:h-[300px] md:h-[400px] pt-0 sm:pt-14 sm:mt-[0px] md:mt-[50px] lg:mt-[120px]"
       >
-        <div className="fadeInRight absolute w-2/3 h-full md:h-[500px] lg:h-[600px] sm:top-0 md:-top-1/2 right-0 z-0 gradient-photo"></div>
+        <div className="fadeInRight absolute sm:w-full md:w-2/3 h-full md:h-[500px] lg:h-[600px] sm:top-0 md:-top-1/2 right-0 z-0 gradient-photo"></div>
         <div className="sm:col-span-12 md:col-span-8 z-40">
           <h1 className="fadeInLeft  col-span-12 sm:text-center md:text-right font-accent p-0 text-primary leading-[10rem] sm:text-5xl md:text-[150px]  z-0">
             <span className="text-secondary">E</span>xperience
