@@ -146,7 +146,7 @@ const Navbar = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={-20}
                 duration={500}
                 className="cursor-pointer"
                 onSetActive={() => handleClick(false)}
