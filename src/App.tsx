@@ -32,7 +32,9 @@ function App() {
       <div
         id="home"
         className={`${
-          aboutReached ? "mx-0 my-10 " : "m-10 sm:px-[25px] md:px-[50px]"
+          aboutReached
+            ? "mx-0 my-10 "
+            : "sm:m-5 sm:px-[25px] md:m-10 md:px-[50px]"
         } rounded-xl bg-background pt-10 shadow-lg transition-all duration-1000`}
       >
         <Hero></Hero>
