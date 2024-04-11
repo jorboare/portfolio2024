@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div id="contact" className="h-[100svh] w-full py-20">
+    <div id="contact" className="w-full pt-20 sm:h-[100svh] md:h-auto">
       <h1 className="font-accent text-primary sm:pl-10 sm:text-[100px] md:pl-24 md:text-[200px] lg:text-[300px]">
         <span className="text-secondary">C</span>ontact
       </h1>
@@ -28,7 +28,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex justify-end">
-        <button className=" mr-24 mt-5 h-10 w-20 rounded-3xl bg-primary font-primary text-secondaryBg hover:bg-secondaryBg hover:text-primary">
+        <button className=" mb-10 mr-24 mt-5 h-10 w-20 rounded-3xl bg-primary font-primary text-secondaryBg hover:bg-secondaryBg hover:text-primary">
           Let's talk!
         </button>
       </div>
