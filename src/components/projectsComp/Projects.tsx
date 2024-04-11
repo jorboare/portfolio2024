@@ -8,17 +8,23 @@ const Projects = () => {
 
   useEffect(() => {
     const container = getContainer();
+
     const scrollable = getScrollableEl();
     if (scrollable.rect) {
-      console.log(scrollable.rect.height);
-      container.el.style.height = `${scrollable.rect.width + 200}px`;
-      console.log(getContainer().rect?.height);
+      console.log(scrollable);
+      container.el.style.height = `${scrollable.rect.width}px`;
     }
+  }, []);
+
+  useEffect(() => {
     const addTranslate = () => {
       const latScroll = getScrollableEl();
       const projContainer = getContainer();
       const latScrollElData = latScroll.rect;
       const projContainerData = projContainer.rect;
+      if (latScrollElData) {
+        projContainer.el.style.height = `${latScrollElData.width}px`;
+      }
       if (projContainerData && latScrollElData && projContainerData.top <= 0) {
         setIsSticky(true);
         const scrollY = Math.round(Math.abs(projContainerData.top));
@@ -30,9 +36,10 @@ const Projects = () => {
     };
     setIsMobile(window.innerHeight > window.innerWidth),
       window.addEventListener("scroll", addTranslate);
-    window.addEventListener("resize", () =>
-      setIsMobile(window.innerHeight > window.innerWidth),
-    );
+    window.addEventListener("resize", () => {
+      console.log("running");
+      setIsMobile(window.innerHeight > window.innerWidth);
+    });
 
     return () => window.removeEventListener("scroll", addTranslate);
   }, []);
@@ -47,6 +54,7 @@ const Projects = () => {
   };
   const getScrollableEl = () => {
     const scrollable = document.querySelector(".projects-scroll");
+
     const element = {
       el: scrollable as HTMLElement,
       rect: scrollable?.getBoundingClientRect(),
@@ -56,16 +64,16 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="projects-container relative h-[100svh] w-full overflow-hidden "
+      className="projects-container relative w-full overflow-hidden "
     >
       <div
-        className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] w-auto flex-row flex-nowrap items-center gap-24 pr-10`}
+        className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
       >
         <h1 className="font-accent  text-primary sm:text-[100px] md:text-[200px] lg:text-[250px]">
           <span className="text-secondary">P</span>rojects
         </h1>
         <div
-          className={`${isMobile ? "h-[50svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
+          className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
             Project Solanum
@@ -81,7 +89,7 @@ const Projects = () => {
           </video>
         </div>
         <div
-          className={`${isMobile ? "h-[50svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
+          className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
             Enter the block
@@ -97,7 +105,7 @@ const Projects = () => {
           </video>
         </div>
         <div
-          className={`${isMobile ? "h-[50svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
+          className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
             Placeholder
@@ -108,7 +116,7 @@ const Projects = () => {
           />
         </div>
         <div
-          className={`${isMobile ? "h-[50svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
+          className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
             Placeholder
