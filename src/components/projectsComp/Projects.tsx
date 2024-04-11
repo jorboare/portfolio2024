@@ -23,7 +23,7 @@ const Projects = () => {
       const latScrollElData = latScroll.rect;
       const projContainerData = projContainer.rect;
       if (latScrollElData) {
-        projContainer.el.style.height = `${latScrollElData.width}px`;
+        projContainer.el.style.height = `${latScrollElData.width + 100}px`;
       }
       if (projContainerData && latScrollElData && projContainerData.top <= 0) {
         setIsSticky(true);
