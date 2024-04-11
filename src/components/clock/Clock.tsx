@@ -40,30 +40,30 @@ const Clock = () => {
       element.style.transform = `rotate(${milEquiv * milliseconds}deg)`;
   }, [milliseconds]);
   return (
-    <div className="absolute right-0 top-0 w-[300px] h-[300px] flex justify-center items-center opacity-75 z-0">
-      <div className="w-[250px] h-[250px]">
-        <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2  z-10">
+    <div className="absolute right-0 top-0 z-0 flex h-[300px] w-[300px] items-center justify-center opacity-75">
+      <div className="h-full w-full">
+        <div className="absolute left-[50%] top-[50%] z-10 -translate-x-1/2  -translate-y-1/2">
           <div
             id="hour"
-            className=" w-[230px] h-[230px] rounded-full  border-primary sm:border md:border-2 crop-circle"
+            className=" rounded-full border-primary crop-circle sm:h-[230px] sm:w-[230px]  sm:border md:h-[300px] md:w-[300px] md:border-2"
           ></div>
 
-          <div className="absolute top-[40%] left-[60%] -translate-x-1/2 -translate-y-1/2  z-[15]">
+          <div className="absolute z-[15] -translate-x-1/2 -translate-y-1/2 sm:left-[60%] sm:top-[40%]  md:left-[57%] md:top-[43%]">
             <div
               id="minute"
-              className="w-[150px] h-[150px] rounded-full  border-primary sm:border md:border-2 crop-circle"
+              className="rounded-full border-primary crop-circle sm:h-[150px] sm:w-[150px]  sm:border md:h-[200px] md:w-[200px] md:border-2"
             ></div>
           </div>
-          <div className="absolute top-[35%] left-[65%] -translate-x-1/2 -translate-y-1/2  z-[20]">
+          <div className="absolute left-[65%] top-[35%] z-[20] -translate-x-1/2  -translate-y-1/2">
             <div
               id="second"
-              className="w-[100px] h-[100px] rounded-full  border-primary sm:border md:border-2 crop-circle"
+              className="h-[100px] w-[100px] rounded-full  border-primary crop-circle sm:border md:border-2"
             ></div>
           </div>
-          <div className="absolute top-[30%] left-[70%] -translate-x-1/2 -translate-y-1/2 z-[25]">
+          <div className="absolute left-[70%] top-[30%] z-[25] -translate-x-1/2 -translate-y-1/2">
             <div
               id="millisecond"
-              className="w-[50px] h-[50px] rounded-full  border-primary sm:border md:border-2 crop-circle-big-gap"
+              className="h-[50px] w-[50px] rounded-full  border-primary crop-circle-big-gap sm:border md:border-2"
             ></div>
           </div>
         </div>

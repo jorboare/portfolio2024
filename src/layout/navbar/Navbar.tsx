@@ -97,7 +97,7 @@ const Navbar = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration={500}
                 className="cursor-pointer"
               >

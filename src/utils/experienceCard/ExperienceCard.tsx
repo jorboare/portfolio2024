@@ -33,7 +33,7 @@ const ExperienceCard: React.FC<CardProps> = (props) => {
 
   return (
     <>
-      <div className="mb-2 grid grid-cols-2 grid-rows-1 text-primary sm:gap-3 md:gap-1">
+      <div className="mb-2 grid grid-cols-2 grid-rows-1 text-primary sm:gap-3 sm:px-5 md:gap-1 md:px-10">
         <div
           className={`${
             pos === "right"

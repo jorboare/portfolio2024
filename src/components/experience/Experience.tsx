@@ -64,7 +64,7 @@ const Experience = () => {
     <>
       <div
         id="experience"
-        className="relative w-full pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
+        className="relative w-full px-10 pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
       >
         <div className="gradient-photo absolute right-0 z-0 h-full fadeInRight sm:top-0 sm:w-full md:-top-1/2 md:h-[500px] md:w-2/3 lg:h-[600px]"></div>
         <div className="z-40 mb-10 sm:col-span-12 md:col-span-8">
@@ -79,7 +79,7 @@ const Experience = () => {
         </div>
         <div
           id="verticalLine"
-          className="-tranlate-y-1/2 absolute top-full z-40 mt-10 w-[1px] -translate-x-1/2 bg-primary transition-width sm:left-0 md:left-1/2"
+          className="-tranlate-y-1/2 absolute top-full z-40 mt-10 w-[1px] -translate-x-1/2 bg-primary transition-width sm:left-0 sm:ml-5 md:left-1/2 md:ml-0"
         ></div>
       </div>
       <div>

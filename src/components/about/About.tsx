@@ -6,11 +6,11 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" relative grid w-full grid-cols-12 grid-rows-2 gap-1 pt-0 sm:mb-5 sm:mt-[0px] sm:h-[400px] sm:border-t-[1px] sm:border-primary sm:pt-14 md:mb-[0px] md:mt-[50px] md:h-[500px] md:border-t-0 lg:mt-[120px] lg:h-[600px] lg:border-t-0"
+      className=" relative grid w-full grid-cols-12 grid-rows-2 gap-1 px-10 pt-0 sm:mb-5 sm:mt-[0px] sm:h-[400px] sm:border-t-[1px] sm:border-primary sm:pt-14 md:mb-[0px] md:mt-[50px] md:h-[500px] md:border-t-0 lg:mt-[120px] lg:h-[600px] lg:border-t-0"
     >
       <div className="row-span-2 sm:col-span-12 md:col-span-4 md:min-h-52 md:min-w-52">
         <img
-          className="m-auto rounded-full object-cover  object-bottom fadeInRight sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] lg:h-[320px] lg:w-[320px]"
+          className="m-auto rounded-full object-cover object-bottom fadeInRight sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] lg:h-[320px] lg:w-[320px]"
           src={ProfileImg}
           alt="Profile image"
         />

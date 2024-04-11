@@ -32,8 +32,8 @@ function App() {
       <div
         id="home"
         className={`${
-          aboutReached ? "my-10 mx-0 px-10 " : "m-10 sm:px-[25px] md:px-[50px]"
-        } bg-background pt-10 rounded-xl shadow-lg transition-all duration-1000`}
+          aboutReached ? "mx-0 my-10 " : "m-10 sm:px-[25px] md:px-[50px]"
+        } rounded-xl bg-background pt-10 shadow-lg transition-all duration-1000`}
       >
         <Hero></Hero>
         <Navbar></Navbar>
