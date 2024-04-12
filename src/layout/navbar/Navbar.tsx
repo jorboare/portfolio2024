@@ -5,6 +5,7 @@ import SelectionCircle from "../../utils/selectionCircle";
 
 interface props {
   reached: boolean;
+  whiteBg: boolean;
 }
 
 const Navbar: React.FC<props> = (props) => {
@@ -14,10 +15,15 @@ const Navbar: React.FC<props> = (props) => {
   const [posY, setPosY] = useState(0);
   const navBarRef = useRef(null);
   const [currentSection, setCurrentSection] = useState("hero");
+  const [whiteBg, setWhiteBg] = useState(props.whiteBg);
 
   useEffect(() => {
     setIsSticky(props.reached);
   }, [props.reached]);
+
+  useEffect(() => {
+    setWhiteBg(props.whiteBg);
+  }, [props.whiteBg]);
 
   useEffect(() => {
     const heroEl = document
@@ -80,7 +86,9 @@ const Navbar: React.FC<props> = (props) => {
             <div className="absolute left-1/2 top-1/2 h-[2px] w-6 -translate-x-1/2 -translate-y-1/2 cursor-pointer  bg-primary before:absolute before:-top-[5px] before:h-[2px] before:w-6 before:bg-primary after:absolute after:top-[5px] after:h-[2px] after:w-6 after:bg-primary" />
           </div>
         ) : (
-          <ul className="flex justify-center gap-2 text-primary">
+          <ul
+            className={`${whiteBg ? "text-background" : "text-primary"} flex justify-center gap-2 text-primary`}
+          >
             <li className="relative">
               <Link
                 activeClass="active"
@@ -162,7 +170,9 @@ const Navbar: React.FC<props> = (props) => {
         <div
           className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[500]  flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
         >
-          <ul className="flex flex-col items-center justify-center gap-5 text-xl text-primary">
+          <ul
+            className={`${whiteBg ? "text-background" : "text-primary"} flex flex-col items-center justify-center gap-5 font-accent text-xl`}
+          >
             <li className="relative z-[600]">
               <Link
                 activeClass="active"

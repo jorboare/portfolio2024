@@ -48,7 +48,9 @@ const ExperienceCard: React.FC<CardProps> = (props) => {
               "line" + index
             }`}
           ></div>
-          <p className="font-accent text-3xl opacity-75">{year}</p>
+          <p className="text-secondAccent font-accent text-3xl opacity-75">
+            {year}
+          </p>
           <h4
             className={`${
               subtitle ? "text-xl opacity-75" : "text-3xl"

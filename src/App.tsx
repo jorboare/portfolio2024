@@ -8,6 +8,7 @@ import Experience from "./components/experience/Experience";
 import Projects from "./components/projectsComp/Projects";
 function App() {
   const [aboutReached, setAboutReached] = useState(false);
+  const [projectsReached, setprojectsReached] = useState(false);
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -22,6 +23,14 @@ function App() {
     const checkPosition = () => {
       const aboutEl = document.getElementById("about");
       if (aboutEl) setAboutReached(aboutEl?.getBoundingClientRect().top <= 0);
+      const projects = document.getElementById("projects");
+      if (projects) {
+        setprojectsReached(
+          projects?.getBoundingClientRect().top +
+            projects?.getBoundingClientRect().height / 2 <=
+            0,
+        );
+      }
     };
     window.addEventListener("scroll", checkPosition);
     const hiddenElements = document.querySelectorAll(".hiddenEl");
@@ -36,10 +45,10 @@ function App() {
           aboutReached
             ? "mx-0 sm:my-0 md:my-10"
             : "sm:mx-0 sm:my-0 sm:px-[25px] md:m-10 md:px-[50px]"
-        } bg-background pt-10 shadow-lg transition-all duration-1000 sm:rounded-none md:rounded-xl`}
+        } ${projectsReached ? "bg-primary" : "bg-background"} bg-background pt-10 shadow-lg transition-all duration-1000 sm:rounded-none md:rounded-xl`}
       >
         <Hero></Hero>
-        <Navbar reached={aboutReached}></Navbar>
+        <Navbar reached={aboutReached} whiteBg={projectsReached}></Navbar>
         <About reached={aboutReached}></About>
         <Experience></Experience>
         <Projects></Projects>
