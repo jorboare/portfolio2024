@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 //@ts-ignore
 import { Link } from "react-scroll";
+import SelectionCircle from "../../utils/selectionCircle";
 
 interface props {
   reached: boolean;
@@ -12,6 +13,7 @@ const Navbar: React.FC<props> = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [posY, setPosY] = useState(0);
   const navBarRef = useRef(null);
+  const [currentSection, setCurrentSection] = useState("hero");
 
   useEffect(() => {
     setIsSticky(props.reached);
@@ -28,11 +30,34 @@ const Navbar: React.FC<props> = (props) => {
         setPosY(heroEl + 40);
       }
     };
+
+    window.addEventListener("scroll", handleSections);
+
+    return () => {
+      window.removeEventListener("scroll", handleSections);
+    };
   }, []);
 
   const handleClick = (state: boolean) => {
     setOpenMenu(state);
   };
+  const handleSections = () => {
+    const sections = document.querySelectorAll(".section");
+    let currentSection = "hero";
+
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < 0) {
+        currentSection = section.id;
+      }
+    });
+
+    setCurrentSection(currentSection);
+  };
+
+  useEffect(() => {
+    console.log(currentSection);
+  }, [currentSection]);
 
   return (
     <>
@@ -56,21 +81,22 @@ const Navbar: React.FC<props> = (props) => {
           </div>
         ) : (
           <ul className="flex justify-center gap-2 text-primary">
-            <li>
+            <li className="relative">
               <Link
                 activeClass="active"
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
-                className="cursor-pointer"
+                className={`cursor-pointer`}
               >
                 Home
               </Link>
+              {currentSection === "hero" && <SelectionCircle />}
             </li>
             ·
-            <li>
+            <li className="relative">
               <Link
                 activeClass="active"
                 to="about"
@@ -78,52 +104,56 @@ const Navbar: React.FC<props> = (props) => {
                 smooth={true}
                 offset={1}
                 duration={500}
-                className="cursor-pointer"
+                className={` cursor-pointer`}
               >
                 About me
               </Link>
+              {currentSection === "about" && <SelectionCircle />}
             </li>
             ·
-            <li>
+            <li className="relative">
               <Link
                 activeClass="active"
                 to="experience"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
-                className="cursor-pointer"
+                className={`cursor-pointer`}
               >
                 Experience
               </Link>
+              {currentSection === "experience" && <SelectionCircle />}
             </li>
             ·
-            <li>
+            <li className="relative">
               <Link
                 activeClass="active"
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={1}
                 duration={500}
-                className="cursor-pointer"
+                className={`cursor-pointer`}
               >
                 Projects
               </Link>
+              {currentSection === "projects" && <SelectionCircle />}
             </li>
             ·
-            <li>
+            <li className="relative">
               <Link
                 activeClass="active"
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
-                className="cursor-pointer"
+                className={`cursor-pointer`}
               >
                 Contact
               </Link>
+              {currentSection === "contact" && <SelectionCircle />}
             </li>
           </ul>
         )}
@@ -139,10 +169,10 @@ const Navbar: React.FC<props> = (props) => {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
-                onSetActive={() => handleClick(false)}
+                onSetActive={() => setOpenMenu(false)}
               >
                 Home
               </Link>
@@ -156,7 +186,7 @@ const Navbar: React.FC<props> = (props) => {
                 offset={1}
                 duration={500}
                 className="cursor-pointer"
-                onSetActive={() => handleClick(false)}
+                onSetActive={() => setOpenMenu(false)}
               >
                 About me
               </Link>
@@ -167,10 +197,10 @@ const Navbar: React.FC<props> = (props) => {
                 to="experience"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
-                onSetActive={() => handleClick(false)}
+                onSetActive={() => setOpenMenu(false)}
               >
                 Experience
               </Link>
@@ -181,10 +211,10 @@ const Navbar: React.FC<props> = (props) => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
-                onSetActive={() => handleClick(false)}
+                onSetActive={() => setOpenMenu(false)}
               >
                 Projects
               </Link>
@@ -195,10 +225,10 @@ const Navbar: React.FC<props> = (props) => {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
-                onSetActive={() => handleClick(false)}
+                onSetActive={() => setOpenMenu(false)}
               >
                 Contact
               </Link>

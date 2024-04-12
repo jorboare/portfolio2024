@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero">
+    <div id="hero" className="section">
       <h3 className="m-0 w-full p-0 pb-5 text-center text-lg text-primary">
         Frontend Developer
       </h3>

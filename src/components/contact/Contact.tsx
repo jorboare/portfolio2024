@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-[100svh] w-full pt-20 ">
+    <div id="contact" className="section h-[100svh] w-full pt-20">
       <h1 className="font-accent text-primary sm:pl-10 sm:text-[100px] md:pl-24 md:text-[200px] lg:text-[300px]">
         <span className="text-secondary">C</span>ontact
       </h1>

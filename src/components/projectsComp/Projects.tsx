@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="projects-container relative w-full overflow-hidden "
+      className="projects-container section relative w-full overflow-hidden"
     >
       <div
         className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
