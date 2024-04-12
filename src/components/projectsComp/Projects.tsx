@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import solanum from "../../assets/video/Solanum.mp4";
 import block from "../../assets/video/Enter the block.mp4";
 import placeholder from "../../assets/experienceImg.jpg";
+import { Link } from "react-router-dom";
+
 const Projects = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -72,34 +74,41 @@ const Projects = () => {
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
-          <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-            Project Solanum
-          </div>
-          <video
-            autoPlay
-            muted
-            loop
-            className="h-[105%] w-full rounded-[5%] object-cover"
-          >
-            <source src={solanum} type="video/mp4" />
-            Your browser doesn't accept videos
-          </video>
+          <Link to="https://project-solanum.vercel.app/" target="_blank">
+            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
+              Project Solanum
+            </div>
+            <video
+              autoPlay
+              muted
+              loop
+              className="h-[105%] w-full rounded-[5%] object-cover"
+            >
+              <source src={solanum} type="video/mp4" />
+              Your browser doesn't accept videos
+            </video>
+          </Link>
         </div>
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
-          <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-            Enter the block
-          </div>
-          <video
-            autoPlay
-            muted
-            loop
-            className="h-[100%] w-full rounded-[5%]  object-cover object-center"
+          <Link
+            to="https://jorboare.github.io/Enter-The-Block-Game/"
+            target="_blank"
           >
-            <source src={block} type="video/mp4" />
-            Your browser doesn't accept videos
-          </video>
+            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
+              Enter the block
+            </div>
+            <video
+              autoPlay
+              muted
+              loop
+              className="h-[100%] w-full rounded-[5%]  object-cover object-center"
+            >
+              <source src={block} type="video/mp4" />
+              Your browser doesn't accept videos
+            </video>
+          </Link>
         </div>
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
