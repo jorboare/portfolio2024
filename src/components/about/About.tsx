@@ -59,9 +59,9 @@ const About: React.FC<props> = (props) => {
             </h1>
             <p className="text-primary sm:text-[20px] md:text-[23px] lg:text-[25px]">
               Legend says that he killed a{" "}
-              <span className="text-secondAccent">poor dragon</span>. I wouldn't
-              do that, I love <span className="text-secondAccent">animals</span>
-              .
+              <span className="text-secondAccent">poor dragon</span>. But I
+              wouldn't do that, I love{" "}
+              <span className="text-secondAccent">animals</span>.
             </p>
           </div>
         </div>
