@@ -35,7 +35,7 @@ const Hero = () => {
         <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[200px]">
           Hi. <span className="m-0 block p-0">I'm Jordi.</span>
         </h1>
-        <h2 className="sm:text-1xl z-30 m-0 p-0 font-primary text-primary md:text-[50px] lg:text-[70px]">
+        <h2 className=" z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[70px]">
           I build things for the{" "}
           <span
             id="webSpan"
