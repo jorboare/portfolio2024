@@ -51,7 +51,7 @@ const About: React.FC<props> = (props) => {
         </div>
 
         <div
-          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 w-auto rounded-xl transition-all  sm:col-span-12 sm:row-start-3 sm:mx-5 md:col-span-6 md:col-start-7 md:row-start-2 md:mr-10 lg:col-start-9 lg:row-start-2`}
+          className={`${props.reached ? "opacity-100" : "opacity-0"} lg:col-start- z-40 w-auto rounded-xl  transition-all sm:col-span-12 sm:row-start-3 sm:mx-5 md:col-span-6 md:col-start-7 md:row-start-2 md:mr-10`}
         >
           <div className="dotted rounded-xl px-10 py-5">
             <h1 className="font-accent text-primary sm:text-[35px] md:text-[35px] lg:text-[40px]">
