@@ -45,7 +45,7 @@ const Navbar: React.FC<props> = (props) => {
             : isSticky
               ? "fixed left-1/2 top-0 mt-2 -translate-x-1/2 rounded-3xl border-b-0 py-2 bg-custom"
               : `absolute left-1/2 -translate-x-1/2 border-b py-3 md:top-[${posY}px]`
-        } z-[500] border-primary transition-noTransform md:w-[80%] lg:w-[80%]`}
+        } z-[600] border-primary transition-noTransform md:w-[80%] lg:w-[80%]`}
       >
         {mobile ? (
           <div
