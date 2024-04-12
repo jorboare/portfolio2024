@@ -19,7 +19,7 @@ const About: React.FC<props> = (props) => {
       </div>
       <div className="z-40 grid grid-cols-12 gap-0">
         <div
-          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 mx-5 mt-16 w-auto transition-all delay-500 sm:col-span-12 md:col-span-7 md:ml-10 md:mt-32 lg:col-span-6`}
+          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 mx-5 mt-16 w-auto transition-all  sm:col-span-12 md:col-span-7 md:ml-10 md:mt-32 lg:col-span-6`}
         >
           <div className="dotted rounded-xl px-10 py-5">
             <h1 className="font-accent text-primary sm:text-[35px] md:text-[55px] lg:text-[70px]">
@@ -40,7 +40,7 @@ const About: React.FC<props> = (props) => {
         </div>
         <div className="sm:col-span-12 sm:col-start-1 md:col-span-4 md:col-start-9 md:mr-10 md:mt-32">
           <p
-            className={`${props.reached ? "opacity-100" : "opacity-0"} dotted mx-5 rounded-xl px-5 py-2 text-center text-[30px] text-primary transition-all delay-500 sm:row-start-2 md:row-start-1 `}
+            className={`${props.reached ? "opacity-100" : "opacity-0"} dotted mx-5 rounded-xl px-5 py-2 text-center text-[30px] text-primary transition-all  sm:row-start-2 md:row-start-1 `}
           >
             This is{" "}
             <span className="text-secondAccent font-accent text-[35px]">
@@ -51,7 +51,7 @@ const About: React.FC<props> = (props) => {
         </div>
 
         <div
-          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 w-auto rounded-xl transition-all delay-500 sm:col-span-12 sm:row-start-3 sm:mx-5 md:col-span-6 md:col-start-7 md:row-start-2 md:mr-10 lg:col-start-9 lg:row-start-2`}
+          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 w-auto rounded-xl transition-all  sm:col-span-12 sm:row-start-3 sm:mx-5 md:col-span-6 md:col-start-7 md:row-start-2 md:mr-10 lg:col-start-9 lg:row-start-2`}
         >
           <div className="dotted rounded-xl px-10 py-5">
             <h1 className="font-accent text-primary sm:text-[35px] md:text-[35px] lg:text-[40px]">

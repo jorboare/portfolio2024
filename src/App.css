@@ -84,7 +84,6 @@
 .gradient-bg {
   clip-path: circle(21.1% at 50% 40%);
   transition: all 0.5s ease;
-  transition-delay: 0.5s;
 }
 
 .gradient-bg.reached {
@@ -106,13 +105,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.circle {
-  width: 90px;
-  height: 35px;
-  border: 1px solid #d05353;
-  border-radius: 50%;
 }
 
 .deformAnimation {
