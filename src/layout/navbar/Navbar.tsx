@@ -130,7 +130,7 @@ const Navbar: React.FC<props> = (props) => {
       </div>
       {mobile && (
         <div
-          className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[49] flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
+          className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[500]  flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
         >
           <ul className="flex flex-col items-center justify-center gap-5 text-xl text-primary">
             <li className="inline">
@@ -153,7 +153,7 @@ const Navbar: React.FC<props> = (props) => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-20}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
                 onSetActive={() => handleClick(false)}
