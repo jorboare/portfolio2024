@@ -9,7 +9,7 @@ const About: React.FC<props> = (props) => {
   return (
     <div
       id="about"
-      className={`${props.reached && "reached"} gradient-bg relative z-50 grid h-[100svh] w-full pt-0 sm:mb-5 sm:mt-[0px] sm:border-t-[1px] sm:border-primary md:mb-[0px] md:border-t-0`}
+      className={`${props.reached && "reached"} gradient-bg relative z-50 grid h-[100vh] w-full pt-0 sm:mb-5 sm:mt-[0px] sm:border-t-[1px] sm:border-primary md:mb-[0px] md:border-t-0`}
     >
       <div className="absolute left-0 top-0 h-full w-full">
         <img
