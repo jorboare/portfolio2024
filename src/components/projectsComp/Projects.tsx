@@ -7,16 +7,14 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
+    //Calculation of the relative height for the project container
     const container = getContainer();
-
     const scrollable = getScrollableEl();
     if (scrollable.rect) {
-      console.log(scrollable);
       container.el.style.height = `${scrollable.rect.width}px`;
     }
-  }, []);
 
-  useEffect(() => {
+    //When scrolling adds the X translation to the projects
     const addTranslate = () => {
       const latScroll = getScrollableEl();
       const projContainer = getContainer();
@@ -37,7 +35,6 @@ const Projects = () => {
     setIsMobile(window.innerHeight > window.innerWidth),
       window.addEventListener("scroll", addTranslate);
     window.addEventListener("resize", () => {
-      console.log("running");
       setIsMobile(window.innerHeight > window.innerWidth);
     });
 
@@ -70,7 +67,7 @@ const Projects = () => {
         className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
       >
         <h1 className="font-accent  text-primary sm:text-[100px] md:text-[200px] lg:text-[250px]">
-          <span className="text-secondary">P</span>rojects
+          Projects
         </h1>
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}

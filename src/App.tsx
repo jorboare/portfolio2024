@@ -3,7 +3,6 @@ import About from "./components/about/About";
 import Hero from "./components/hero/Hero";
 import { useEffect, useState } from "react";
 import Navbar from "./layout/navbar/Navbar";
-import { hasScrolledToPixel, getMaxScroll } from "./utils/scrollUtils";
 import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projectsComp/Projects";
@@ -21,25 +20,27 @@ function App() {
 
   useEffect(() => {
     const checkPosition = () => {
-      setAboutReached(hasScrolledToPixel(getMaxScroll()));
+      const aboutEl = document.getElementById("about");
+      if (aboutEl) setAboutReached(aboutEl?.getBoundingClientRect().top <= 0);
     };
     window.addEventListener("scroll", checkPosition);
     const hiddenElements = document.querySelectorAll(".hiddenEl");
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <>
       <div
         id="home"
         className={`${
           aboutReached
-            ? "mx-0 my-10 "
-            : "sm:m-5 sm:px-[25px] md:m-10 md:px-[50px]"
-        } rounded-xl bg-background pt-10 shadow-lg transition-all duration-1000`}
+            ? "mx-0 sm:my-0 md:my-10"
+            : "sm:mx-0 sm:my-0 sm:px-[25px] md:m-10 md:px-[50px]"
+        } bg-background pt-10 shadow-lg transition-all duration-1000 sm:rounded-none md:rounded-xl`}
       >
         <Hero></Hero>
-        <Navbar></Navbar>
-        <About></About>
+        <Navbar reached={aboutReached}></Navbar>
+        <About reached={aboutReached}></About>
         <Experience></Experience>
         <Projects></Projects>
         <Contact></Contact>

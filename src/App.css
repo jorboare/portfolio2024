@@ -16,6 +16,18 @@
         fadeInRight: "fadeInRight 1s ease-in-out",
       }, */
 
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --font-size-large: 24px;
+  --primary: #f1e8b8;
+  --secondary: #f9e784;
+  --accent: #e58f65;
+  --secondAccent: #d05353;
+  --background: #191919;
+  --secondaryBg: #3b3b3b;
+}
+
 .fadeInLeft {
   animation: fadeInLeft 0.5s ease-in-out;
   animation-timeline: view();
@@ -63,7 +75,97 @@
   background-image: radial-gradient(
     circle at center,
     rgba(0, 0, 0, 0.2) -2%,
-    #2b2b2b 48%
+    #191919 48%
   ); /* Máscara radial */
   pointer-events: none; /* Ignorar eventos de ratón */
+  transition: all 1s ease-in-out;
+}
+
+.gradient-bg {
+  clip-path: circle(21.1% at 50% 40%);
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+.gradient-bg.reached {
+  clip-path: circle(72% at 50% 50%);
+}
+
+.dotted {
+  opacity: 1;
+  background-image: radial-gradient(
+      var(--primary) 0.5px,
+      rgba(0, 0, 0, 0.4) 0.5px
+    ),
+    radial-gradient(var(--primary) 0.5px, transparent 0.5px);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+}
+
+.deformAnimation {
+  transition: all 0.5s linear;
+  animation: deform 3s linear infinite reverse;
+}
+
+.deformAnimationRev {
+  transition: all 0.5s linear;
+  animation: deform 3s linear infinite;
+}
+
+@keyframes deform {
+  0% {
+    transform: rotate(0deg)
+      matrix(
+        0.9280848734541316,
+        0.05703682562112785,
+        -0.03229837997653869,
+        1.0157443916946765,
+        0,
+        0
+      );
+  }
+  25% {
+    transform: rotate(90deg)
+      matrix(
+        0.9665689436629762,
+        0.03404274139807876,
+        0.06497426159074486,
+        1.0064882077213013,
+        0,
+        0
+      );
+  }
+  50% {
+    transform: rotate(180deg)
+      matrix(
+        0.9280848734541316,
+        0.05703682562112785,
+        -0.03229837997653869,
+        1.0157443916946765,
+        0,
+        0
+      );
+  }
+  75% {
+    transform: rotate(270deg)
+      matrix(
+        1.0445735709870982,
+        0.054173667773738485,
+        -0.03965332795335506,
+        1.0725139339384282,
+        0,
+        0
+      );
+  }
+  100% {
+    transform: rotate(360deg)
+      matrix(
+        0.9280848734541316,
+        0.05703682562112785,
+        -0.03229837997653869,
+        1.0157443916946765,
+        0,
+        0
+      );
+  }
 }

@@ -64,22 +64,28 @@ const Experience = () => {
     <>
       <div
         id="experience"
-        className="relative w-full px-10 pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
+        className="relative z-40 w-full px-10 pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
       >
         <div className="gradient-photo absolute right-0 z-0 h-full fadeInRight sm:top-0 sm:w-full md:-top-1/2 md:h-[500px] md:w-2/3 lg:h-[600px]"></div>
         <div className="z-40 mb-10 sm:col-span-12 md:col-span-8">
           <h1 className="fadeInLeft  z-30 col-span-12 p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-center md:text-[150px]">
-            <span className="text-secondary">E</span>xperience
+            Experience
           </h1>
           <p className="fadeInLeft z-50 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
-            With experience spanning both front-end and back-end development, my
-            expertise lies in crafting visually compelling experiences using
-            React.
+            With experience spanning both{" "}
+            <span className="text-secondAccent font-accent">front-end</span> and
+            <span className="text-secondAccent font-accent">
+              {" "}
+              back-end
+            </span>{" "}
+            development, my expertise lies in crafting visually compelling
+            experiences using{" "}
+            <span className="text-secondAccent font-accent">React</span>.
           </p>
         </div>
         <div
           id="verticalLine"
-          className="-tranlate-y-1/2 absolute top-full z-40 mt-10 w-[1px] -translate-x-1/2 bg-primary transition-width sm:left-0 sm:ml-5 md:left-1/2 md:ml-0"
+          className="-tranlate-y-1/2 absolute top-full z-50 mt-10 w-[1px] -translate-x-1/2 bg-primary transition-width sm:left-0 sm:ml-5 md:left-1/2 md:ml-0"
         ></div>
       </div>
       <div>

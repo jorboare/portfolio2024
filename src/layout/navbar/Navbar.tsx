@@ -1,27 +1,33 @@
 import { useState, useEffect, useRef } from "react";
-import { getMaxScroll, hasScrolledToPixel } from "../../utils/scrollUtils";
 //@ts-ignore
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+interface props {
+  reached: boolean;
+}
+
+const Navbar: React.FC<props> = (props) => {
   const [isSticky, setIsSticky] = useState(false);
   const [mobile, setMobile] = useState(window.innerWidth < 760);
   const [openMenu, setOpenMenu] = useState(false);
+  const [posY, setPosY] = useState(0);
   const navBarRef = useRef(null);
 
   useEffect(() => {
-    const checkPosition = () => {
-      if (navBarRef.current) {
-        //@ts-ignore
-        const rect = navBarRef.current.getBoundingClientRect();
-        setIsSticky(hasScrolledToPixel(getMaxScroll()));
+    setIsSticky(props.reached);
+  }, [props.reached]);
+
+  useEffect(() => {
+    const heroEl = document
+      .getElementById("hero")
+      ?.getBoundingClientRect().height;
+
+    window.addEventListener("resize", () => setMobile(window.innerWidth < 760));
+    window.onload = () => {
+      if (heroEl) {
+        setPosY(heroEl + 40);
       }
     };
-
-    window.addEventListener("scroll", checkPosition);
-    window.addEventListener("resize", () => setMobile(window.innerWidth < 760));
-
-    checkPosition();
   }, []);
 
   const handleClick = (state: boolean) => {
@@ -31,14 +37,15 @@ const Navbar = () => {
   return (
     <>
       <div
+        id="navbar"
         ref={navBarRef}
         className={`${
           mobile
             ? "fixed right-4 top-5 "
             : isSticky
               ? "fixed left-1/2 top-0 mt-2 -translate-x-1/2 rounded-3xl border-b-0 py-2 bg-custom"
-              : "absolute left-1/2 -translate-x-1/2 border-b py-3 sm:top-[357px] md:top-[537px] lg:top-[650px]"
-        } z-50 border-primary transition-noTransform md:w-[80%] lg:w-[80%]`}
+              : `absolute left-1/2 -translate-x-1/2 border-b py-3 md:top-[${posY}px]`
+        } z-[500] border-primary transition-noTransform md:w-[80%] lg:w-[80%]`}
       >
         {mobile ? (
           <div
@@ -69,7 +76,7 @@ const Navbar = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={1}
                 duration={500}
                 className="cursor-pointer"
               >
@@ -123,9 +130,9 @@ const Navbar = () => {
       </div>
       {mobile && (
         <div
-          className={`${openMenu ? "max-h-[500px] p-5" : "h-0"} fixed left-1/2 top-0 z-[49] w-full -translate-x-1/2 transition-all bg-custom`}
+          className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[49] flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
         >
-          <ul className="flex flex-col items-center justify-center gap-2 text-primary ">
+          <ul className="flex flex-col items-center justify-center gap-5 text-xl text-primary">
             <li className="inline">
               <Link
                 activeClass="active"

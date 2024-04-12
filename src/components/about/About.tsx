@@ -1,38 +1,70 @@
-import ProfileImg from "../../assets/profile/profile.jpg";
+import bgImage from "../../assets/Raphael_-_Saint_George_and_the_Dragon_-_Google_Art_Project.jpg";
 //@ts-ignore
 import ReactVivus from "react-vivus";
-import Arrow from "../../assets/arrow.svg";
-const About = () => {
+
+interface props {
+  reached: boolean;
+}
+const About: React.FC<props> = (props) => {
   return (
     <div
       id="about"
-      className=" relative grid w-full grid-cols-2 grid-rows-2 gap-1 pt-0 sm:mb-5 sm:mt-[0px] sm:h-[400px] sm:border-t-[1px] sm:border-primary sm:px-3 sm:pt-14 md:mb-[0px] md:mt-[50px] md:h-[500px] md:border-t-0 md:px-10 lg:mt-[120px] lg:h-[600px] lg:border-t-0"
+      className={`${props.reached && "reached"} gradient-bg relative z-50 grid h-[100svh] w-full pt-0 sm:mb-5 sm:mt-[0px] sm:border-t-[1px] sm:border-primary md:mb-[0px] md:border-t-0`}
     >
-      <div className="col-start-1  sm:col-span-2 sm:row-start-1 md:col-span-1 md:min-h-52 md:min-w-52">
+      <div className="absolute left-0 top-0 h-full w-full">
         <img
-          className="m-auto rounded-full object-cover object-bottom fadeInRight sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] lg:h-[320px] lg:w-[320px]"
-          src={ProfileImg}
-          alt="Profile image"
-        />
+          className={`h-full w-full object-cover object-center`}
+          src={bgImage}
+        ></img>
       </div>
-      <div className="z-40 sm:col-span-2 sm:col-start-1 sm:row-start-2 sm:gap-6 md:col-span-1 md:col-start-2 md:row-start-1">
-        <h1 className="fadeInLeft transition-view col-span-12 text-nowrap p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-right md:text-[120px] lg:text-[150px]">
-          <span className="text-secondary">A</span>bout Me
-        </h1>
-        <p className="fadeInLeft z-40 ml-auto max-w-[700px] font-primary text-primary sm:text-lg md:text-2xl">
-          +3 years experienced front-end developer from Spain based in
-          Amsterdam. Keeping up with beautiful visuals, great design and solid
-          code.
-        </p>
-      </div>
-      <img
-        src={Arrow}
-        className="col-span-1 col-start-1 row-start-1 ml-auto w-14 fadeInRight sm:hidden md:visible"
-      />
-      <div className="col-span-5 col-start-5 row-start-3 sm:hidden md:visible">
-        <p className="m-0 ml-2 mt-8 w-full p-0 font-handwrite text-3xl text-primary fadeInRight sm:hidden md:block ">
-          I also love hiking, nature and sports!
-        </p>
+      <div className="z-40 grid grid-cols-12 gap-0">
+        <div
+          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 mx-5 mt-16 w-auto transition-all delay-500 sm:col-span-12 md:col-span-7 md:ml-10 md:mt-32 lg:col-span-6`}
+        >
+          <div className="dotted rounded-xl px-10 py-5">
+            <h1 className="font-accent text-primary sm:text-[35px] md:text-[55px] lg:text-[70px]">
+              About me
+            </h1>
+            <p className="text-primary sm:text-[20px] md:text-[23px] lg:text-[25px]">
+              <span className="text-secondAccent font-accent sm:text-[23px] md:text-[30px] lg:text-[35px]">
+                +3 years
+              </span>{" "}
+              experienced front-end developer from Spain based in
+              <span className="text-secondAccent font-accent sm:text-[23px] md:text-[30px] lg:text-[35px]">
+                {" "}
+                Amsterdam
+              </span>
+              . Keeping up with beautiful visuals, great design and solid code.
+            </p>
+          </div>
+        </div>
+        <div className="sm:col-span-12 sm:col-start-1 md:col-span-4 md:col-start-9 md:mr-10 md:mt-32">
+          <p
+            className={`${props.reached ? "opacity-100" : "opacity-0"} dotted mx-5 rounded-xl px-5 py-2 text-center text-[30px] text-primary transition-all delay-500 sm:row-start-2 md:row-start-1 `}
+          >
+            This is{" "}
+            <span className="text-secondAccent font-accent text-[35px]">
+              {" "}
+              Saint George
+            </span>
+          </p>
+        </div>
+
+        <div
+          className={`${props.reached ? "opacity-100" : "opacity-0"} z-40 w-auto rounded-xl transition-all delay-500 sm:col-span-12 sm:row-start-3 sm:mx-5 md:col-span-6 md:col-start-7 md:row-start-2 md:mr-10 lg:col-start-9 lg:row-start-2`}
+        >
+          <div className="dotted rounded-xl px-10 py-5">
+            <h1 className="font-accent text-primary sm:text-[35px] md:text-[35px] lg:text-[40px]">
+              George <span className="text-secondAccent">===</span> Jordi
+            </h1>
+            <p className="text-primary sm:text-[20px] md:text-[23px] lg:text-[25px]">
+              Legend says that he killed a{" "}
+              <span className="text-secondAccent">poor dragon</span>. I wouldn't
+              do that, I love <span className="text-secondAccent">animals</span>
+              .
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
