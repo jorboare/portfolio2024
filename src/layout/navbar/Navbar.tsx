@@ -163,7 +163,7 @@ const Navbar: React.FC<props> = (props) => {
           className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[500]  flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
         >
           <ul className="flex flex-col items-center justify-center gap-5 text-xl text-primary">
-            <li className="inline">
+            <li className="relative z-[600]">
               <Link
                 activeClass="active"
                 to="home"
@@ -176,8 +176,9 @@ const Navbar: React.FC<props> = (props) => {
               >
                 Home
               </Link>
+              {currentSection === "hero" && <SelectionCircle />}
             </li>
-            <li>
+            <li className="relative z-[600]">
               <Link
                 activeClass="active"
                 to="about"
@@ -190,8 +191,9 @@ const Navbar: React.FC<props> = (props) => {
               >
                 About me
               </Link>
+              {currentSection === "about" && <SelectionCircle />}
             </li>
-            <li>
+            <li className="relative z-[600]">
               <Link
                 activeClass="active"
                 to="experience"
@@ -204,8 +206,9 @@ const Navbar: React.FC<props> = (props) => {
               >
                 Experience
               </Link>
+              {currentSection === "experience" && <SelectionCircle />}
             </li>
-            <li>
+            <li className="relative z-[600]">
               <Link
                 activeClass="active"
                 to="projects"
@@ -218,8 +221,9 @@ const Navbar: React.FC<props> = (props) => {
               >
                 Projects
               </Link>
+              {currentSection === "projects" && <SelectionCircle />}
             </li>
-            <li>
+            <li className="relative z-[600]">
               <Link
                 activeClass="active"
                 to="contact"
@@ -232,6 +236,7 @@ const Navbar: React.FC<props> = (props) => {
               >
                 Contact
               </Link>
+              {currentSection === "contact" && <SelectionCircle />}
             </li>
           </ul>
         </div>
