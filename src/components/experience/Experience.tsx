@@ -73,14 +73,23 @@ const Experience = () => {
           </h1>
           <p className="fadeInLeft z-50 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
             With experience spanning both{" "}
-            <span className="text-secondAccent font-accent">front-end</span> and
-            <span className="text-secondAccent font-accent">
+            <span className="font-accent text-secondAccent">front-end</span> and
+            <span className="font-accent text-secondAccent">
               {" "}
               back-end
             </span>{" "}
             development, my expertise lies in crafting visually compelling
             experiences using{" "}
-            <span className="text-secondAccent font-accent">React</span>.
+            <span className="font-accent text-secondAccent">React</span>.
+          </p>
+          <p className="fadeInLeft z-50 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
+            Here's a{" "}
+            <span className="font-accent text-secondAccent">timeline</span>{" "}
+            outlining my professional journey. While some projects are bound by
+            confidentiality agreements, I'm more than happy to discuss the scope
+            of my{" "}
+            <span className="font-accent text-secondAccent">contributions</span>{" "}
+            to them.
           </p>
         </div>
         <div
