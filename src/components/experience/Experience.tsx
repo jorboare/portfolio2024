@@ -82,7 +82,7 @@ const Experience = () => {
             experiences using{" "}
             <span className="font-accent text-secondAccent">React</span>.
           </p>
-          <p className="fadeInLeft z-50 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
+          <p className="fadeInLeft z-50 mt-2 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
             Here's a{" "}
             <span className="font-accent text-secondAccent">timeline</span>{" "}
             outlining my professional journey. While some projects are bound by
