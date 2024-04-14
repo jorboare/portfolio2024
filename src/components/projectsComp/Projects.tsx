@@ -68,15 +68,27 @@ const Projects = () => {
       <div
         className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
       >
-        <h1 className="font-accent  text-primary sm:text-[100px] md:text-[200px] lg:text-[250px]">
-          Projects
-        </h1>
+        <div className="font-accent  text-primary sm:text-[100px] md:text-[200px]">
+          <h1 className="dotted m-0 p-0 leading-tight">Projects</h1>
+          <div className="flex h-9 items-center justify-end">
+            <p className="block text-right text-xl text-secondAccent">
+              Keep Scrolling
+            </p>
+            <div className="flex h-10 items-end justify-center px-3">
+              <p className="circleScrollAnimation mr-10 block"></p>
+            </div>
+          </div>
+        </div>
+
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <Link to="https://project-solanum.vercel.app/" target="_blank">
             <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-              Project Solanum
+              <p className="text-center">Project Solanum</p>
+              <p className="text-center text-xl">
+                React, React-context, Styled Components
+              </p>
             </div>
             <video
               autoPlay
@@ -96,8 +108,11 @@ const Projects = () => {
             to="https://jorboare.github.io/Enter-The-Block-Game/"
             target="_blank"
           >
-            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-              Enter the block
+            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-1 sm:text-[40px] md:bottom-5 md:text-[100px]">
+              <p className="text-center"> Enter the block</p>
+              <p className="text-center text-xl">
+                React, React-context, Styled Components
+              </p>
             </div>
             <video
               autoPlay
