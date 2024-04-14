@@ -69,7 +69,11 @@ const Projects = () => {
         className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
       >
         <div className="font-accent  text-primary sm:text-[100px] md:text-[200px]">
-          <h1 className="dotted m-0 p-0 leading-tight">Projects</h1>
+          <div className="relative">
+            <h1 className="m-0 p-0 leading-tight">Projects</h1>
+            <div className="stripped absolute -right-10 top-0 h-3/4 w-2/3 opacity-70"></div>
+            <div className="dottedNoBg absolute -left-8 bottom-0 h-2/3 w-[80%]"></div>
+          </div>
           <div className="flex h-9 items-center justify-end">
             <p className="block text-right text-xl text-secondAccent">
               Keep Scrolling
@@ -84,9 +88,9 @@ const Projects = () => {
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
           <Link to="https://project-solanum.vercel.app/" target="_blank">
-            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-              <p className="text-center">Project Solanum</p>
-              <p className="text-center text-xl">
+            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-1 sm:text-[40px] md:bottom-5 md:text-[80px]">
+              <p className="text-center leading-[1]">Project Solanum</p>
+              <p className="text-center text-xl leading-[1]">
                 React, React-context, Styled Components
               </p>
             </div>
@@ -108,9 +112,12 @@ const Projects = () => {
             to="https://jorboare.github.io/Enter-The-Block-Game/"
             target="_blank"
           >
-            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-1 sm:text-[40px] md:bottom-5 md:text-[100px]">
-              <p className="text-center"> Enter the block</p>
-              <p className="text-center text-xl">
+            <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-1 sm:text-[40px] md:bottom-5 md:text-[80px]">
+              <p className="leading-1 text-center leading-[1]">
+                {" "}
+                Enter the block
+              </p>
+              <p className="leading-1 text-center text-xl leading-[1]">
                 React, React-context, Styled Components
               </p>
             </div>
@@ -128,19 +135,14 @@ const Projects = () => {
         <div
           className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
         >
-          <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-            Placeholder
-          </div>
-          <img
-            src={placeholder}
-            className="h-[100%] w-full rounded-[5%]  object-cover object-center"
-          />
-        </div>
-        <div
-          className={`${isMobile ? "h-[70svw] w-[80svw]" : "h-[70svh] w-[80svh]"}  relative shrink-0 grow-0 overflow-hidden rounded-[5%] shadow-2xl`}
-        >
-          <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-2 sm:text-[40px] md:bottom-5 md:text-[100px]">
-            Placeholder
+          <div className="absolute left-1/2 z-40 w-auto -translate-x-1/2 text-nowrap p-0 font-accent text-primary sm:bottom-1 sm:text-[40px] md:bottom-5 md:text-[70px]">
+            <p className="leading-1 text-center leading-[1]">
+              {" "}
+              More projects coming
+            </p>
+            <p className="leading-1 text-center text-xl leading-[1]">
+              React, Angular, Websockets, React Native
+            </p>
           </div>
           <img
             src={placeholder}

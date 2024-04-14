@@ -5,7 +5,6 @@ import SelectionCircle from "../../utils/selectionCircle";
 
 interface props {
   reached: boolean;
-  whiteBg: boolean;
 }
 
 const Navbar: React.FC<props> = (props) => {
@@ -15,15 +14,10 @@ const Navbar: React.FC<props> = (props) => {
   const [posY, setPosY] = useState(0);
   const navBarRef = useRef(null);
   const [currentSection, setCurrentSection] = useState("hero");
-  const [whiteBg, setWhiteBg] = useState(props.whiteBg);
 
   useEffect(() => {
     setIsSticky(props.reached);
   }, [props.reached]);
-
-  useEffect(() => {
-    setWhiteBg(props.whiteBg);
-  }, [props.whiteBg]);
 
   useEffect(() => {
     const heroEl = document
@@ -74,21 +68,19 @@ const Navbar: React.FC<props> = (props) => {
           mobile
             ? "fixed right-4 top-5 "
             : isSticky
-              ? "fixed left-1/2 top-0 mt-2 -translate-x-1/2 rounded-3xl border-b-0 py-2 bg-custom"
+              ? `fixed left-1/2 top-0 mt-2 -translate-x-1/2 rounded-3xl border-b-0 py-2 bg-custom`
               : `absolute left-1/2 -translate-x-1/2 border-b py-3 md:top-[${posY}px]`
         } z-[600] border-primary transition-noTransform md:w-[80%] lg:w-[80%]`}
       >
         {mobile ? (
           <div
-            className="relative h-10 w-10 cursor-pointer rounded-full bg-custom"
+            className={`relative h-10 w-10 cursor-pointer rounded-full transition-all bg-custom`}
             onClick={() => handleClick(!openMenu)}
           >
             <div className="absolute left-1/2 top-1/2 h-[2px] w-6 -translate-x-1/2 -translate-y-1/2 cursor-pointer  bg-primary before:absolute before:-top-[5px] before:h-[2px] before:w-6 before:bg-primary after:absolute after:top-[5px] after:h-[2px] after:w-6 after:bg-primary" />
           </div>
         ) : (
-          <ul
-            className={`${whiteBg ? "text-background" : "text-primary"} flex justify-center gap-2 text-primary`}
-          >
+          <ul className={`flex justify-center gap-2 text-primary`}>
             <li className="relative">
               <Link
                 activeClass="active"
@@ -171,7 +163,7 @@ const Navbar: React.FC<props> = (props) => {
           className={`${openMenu ? "h-[50svh] p-5" : "h-0"} fixed left-1/2 top-0 z-[500]  flex w-full -translate-x-1/2 items-center justify-center transition-all bg-custom`}
         >
           <ul
-            className={`${whiteBg ? "text-background" : "text-primary"} flex flex-col items-center justify-center gap-5 font-accent text-xl`}
+            className={`flex flex-col items-center justify-center gap-5 font-accent text-xl text-primary`}
           >
             <li className="relative z-[600]">
               <Link

@@ -100,6 +100,25 @@
   background-size: 10px 10px;
   background-repeat: repeat;
 }
+
+.stripped {
+  opacity: 1;
+  background-size: 15px 15px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    var(--primary) 1px,
+    transparent 0,
+    transparent 50%
+  );
+}
+.dottedNoBg {
+  opacity: 1;
+  background-image: radial-gradient(var(--primary) 0.5px, transparent 0.5px),
+    radial-gradient(var(--primary) 0.5px, transparent 0.5px);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+}
 .circleCont {
   position: absolute;
   top: 50%;
