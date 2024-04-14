@@ -25,8 +25,8 @@ const Hero = () => {
 
   return (
     <div id="hero" className="section">
-      <h3 className="m-0 w-full p-0 pb-5 text-center text-lg text-primary">
-        Frontend Developer
+      <h3 className="m-0 w-full p-0 pb-5 text-center text-xl text-primary">
+        Front-end Developer
       </h3>
       <div
         className={`m-auto mb-8 mt-1 h-[1px] w-full bg-primary opacity-100 transition-all duration-500`}
