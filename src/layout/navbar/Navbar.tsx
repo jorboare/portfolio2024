@@ -47,7 +47,7 @@ const Navbar: React.FC<props> = (props) => {
 
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < 0) {
+      if (sectionTop < 100) {
         currentSection = section.id;
       }
     });

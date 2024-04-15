@@ -15,6 +15,7 @@ const About: React.FC<props> = (props) => {
         <img
           className={`h-full w-full object-cover object-center`}
           src={bgImage}
+          alt="Image of the painting Saint George from Raphael"
         ></img>
       </div>
       <div className="z-40 grid grid-cols-12 gap-0">
