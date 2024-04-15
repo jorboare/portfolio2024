@@ -54,11 +54,6 @@ const Navbar: React.FC<props> = (props) => {
 
     setCurrentSection(currentSection);
   };
-
-  useEffect(() => {
-    console.log(currentSection);
-  }, [currentSection]);
-
   return (
     <>
       <div
@@ -231,7 +226,7 @@ const Navbar: React.FC<props> = (props) => {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={1}
+                offset={10}
                 duration={500}
                 className="cursor-pointer"
                 onSetActive={() => setOpenMenu(false)}

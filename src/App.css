@@ -189,19 +189,6 @@
   }
 }
 
-.bouncing {
-  animation: bouncing 1s ease-in-out infinite alternate;
-}
-
-@keyframes bouncing {
-  0% {
-    transform: translateY(0rem);
-  }
-  100% {
-    transform: translateY(1rem);
-  }
-}
-
 .circleScrollAnimation {
   width: 15px;
   height: 15px;
@@ -225,5 +212,61 @@
   100% {
     transform: translateY(-40px);
     opacity: 0;
+  }
+}
+
+.marqueeContainer {
+  overflow: hidden;
+}
+
+.technologiesContainer {
+  position: relative;
+}
+.technologiesContainer:before {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(to right, var(--background), transparent);
+  z-index: 10;
+
+  content: "";
+}
+
+.technologiesContainer:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(to left, var(--background), transparent);
+  content: "";
+}
+
+.marqueeContainer:hover .marquee {
+  animation-play-state: paused;
+}
+.marquee {
+  animation: slide 20s infinite linear;
+  display: inline-block;
+}
+
+.marquee h1 {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.technologyImg {
+  display: inline-block;
+  height: 50px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

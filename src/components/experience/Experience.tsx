@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import ExperienceCard from "../../utils/experienceCard/ExperienceCard";
 import { experiences } from "../../data/data";
+import Technologies from "../technologies/Technologies";
 const Experience = () => {
   const thirdHeight = (window.innerHeight / 3) * 2;
 
@@ -67,8 +68,8 @@ const Experience = () => {
         className="section relative z-40 w-full px-10 pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
       >
         <div className="gradient-photo absolute right-0 z-0 h-full fadeInRight sm:top-0 sm:w-full md:-top-1/2 md:h-[500px] md:w-2/3 lg:h-[600px]"></div>
-        <div className="z-40 mb-10 sm:col-span-12 md:col-span-8">
-          <h1 className="fadeInLeft  z-30 col-span-12 p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-center md:text-[150px]">
+        <div className="z-40 mb-10">
+          <h1 className="fadeInLeft  z-30 p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-center md:text-[150px]">
             Experience
           </h1>
           <p className="fadeInLeft z-50 max-w-[700px] font-primary text-primary sm:text-lg md:mb-10 md:ml-[20%] md:text-xl lg:text-2xl">
@@ -91,6 +92,7 @@ const Experience = () => {
             <span className="font-accent text-secondAccent">contributions</span>{" "}
             to them.
           </p>
+          <Technologies />
         </div>
         <div
           id="verticalLine"
