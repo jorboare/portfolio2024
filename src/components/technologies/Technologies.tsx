@@ -15,65 +15,65 @@ const Technologies = () => {
   return (
     <>
       <div className="marqueeContainer technologiesContainer mx-auto max-h-24 w-full max-w-[1120px] overflow-hidden whitespace-nowrap text-sm uppercase text-primary">
-        <div className="marquee min-w-[1120px] py-2 text-center">
+        <div className="marquee w-[1094px] py-2 text-center">
           <div className=" mx-4 inline-block">
             <img src={react} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center">React</p>
+            <p className=" block ">React</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={angular}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">Angular</p>
+            <p className=" block  ">Angular</p>
           </div>
           <div className=" mx-4 inline-block">
             <img src={node} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">NodeJS</p>
+            <p className=" block  ">NodeJS</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={html} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">HTML</p>
+            <p className=" block  ">HTML</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={css} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">CSS</p>
+            <p className=" block  ">CSS</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={sass} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">sass</p>
+            <p className=" block  ">sass</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={tailwind}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">tailwind</p>
+            <p className=" block  ">tailwind</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={git} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">git</p>
+            <p className=" block  ">git</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={aws}
               className="technologyImg mx-auto mb-2 block max-w-[50px] object-contain"
             ></img>
-            <p className=" block text-center ">aws</p>
+            <p className=" block  ">aws</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={teamcity}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">teamcity</p>
+            <p className=" block  ">teamcity</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={jenkins}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">jenkins</p>
+            <p className=" block  ">jenkins</p>
           </div>
           <div className="mx-4 inline-block ">
             <img
@@ -83,72 +83,72 @@ const Technologies = () => {
             <p className=" block ">liquibase</p>
           </div>
         </div>
-        <div className="marquee min-w-[1150px] py-2">
+        <div className="marquee w-[1094px] py-2 text-center">
           <div className=" mx-4 inline-block">
             <img src={react} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">React</p>
+            <p className=" block  ">React</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={angular}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">Angular</p>
+            <p className=" block  ">Angular</p>
           </div>
           <div className=" mx-4 inline-block">
             <img src={node} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">NodeJS</p>
+            <p className=" block  ">NodeJS</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={html} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">HTML</p>
+            <p className=" block  ">HTML</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={css} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">CSS</p>
+            <p className=" block  ">CSS</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={sass} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">sass</p>
+            <p className=" block  ">sass</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={tailwind}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">tailwind</p>
+            <p className=" block  ">tailwind</p>
           </div>
           <div className="mx-4 inline-block">
             <img src={git} className="technologyImg mx-auto mb-2 block"></img>
-            <p className=" block text-center ">git</p>
+            <p className=" block  ">git</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={aws}
               className="technologyImg mx-auto mb-2 block max-w-[50px] object-contain"
             ></img>
-            <p className=" block text-center ">aws</p>
+            <p className=" block  ">aws</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={teamcity}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">teamcity</p>
+            <p className=" block  ">teamcity</p>
           </div>
           <div className="mx-4 inline-block">
             <img
               src={jenkins}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">jenkins</p>
+            <p className=" block  ">jenkins</p>
           </div>
           <div className="mx-4 inline-block ">
             <img
               src={liquibase}
               className="technologyImg mx-auto mb-2 block"
             ></img>
-            <p className=" block text-center ">liquibase</p>
+            <p className=" block  ">liquibase</p>
           </div>
         </div>
       </div>
