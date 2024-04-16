@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import Clock from "../clock/Clock";
+import Background from "./Background";
+
 const Hero = () => {
   let fontIndex = 0;
   const fonts = [
@@ -24,28 +25,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="section">
-      <h3 className="m-0 w-full p-0 pb-5 text-center text-xl text-primary">
+    <div id="hero" className="section relative h-[90vh] sm:px-2 md:px-32">
+      <Background />
+      <h3 className="m-0 mx-2 w-full pt-2 text-center text-xl text-primary">
         Front-end Developer
       </h3>
-      <div
-        className={`m-auto mb-8 mt-1 h-[1px] w-full bg-primary opacity-100 transition-all duration-500`}
-      />
-      <div className="relative z-40 w-full overflow-hidden sm:h-[180px] md:h-[400px] lg:h-[500px]">
-        <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[200px]">
+      <div className="align-center relative z-40 mt-5 flex h-[100%] w-full flex-col items-center justify-center">
+        <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[150px]">
           Hi. <span className="m-0 block p-0">I'm Jordi.</span>
         </h1>
-        <h2 className=" z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[70px]">
+        <h2 className="z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[60px]">
           I build things for the{" "}
           <span
             id="webSpan"
-            className="text-secondAccent md:text-[48px] lg:text-[68px]"
+            className="m-0 p-0 leading-[1] text-secondAccent md:text-[48px] lg:text-[68px]"
           >
             web
           </span>
           .
         </h2>
-        <Clock></Clock>
       </div>
     </div>
   );
