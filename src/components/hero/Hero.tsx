@@ -25,7 +25,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="section relative h-[90vh] sm:px-2 md:px-32">
+    <div id="hero" className="section relative h-[100vh] sm:px-2 md:px-32">
       <Background />
       <h3 className="m-0 mx-2 w-full pt-2 text-center text-xl text-primary">
         Front-end Developer
@@ -45,6 +45,7 @@ const Hero = () => {
           .
         </h2>
       </div>
+      <div className="absolute bottom-0 left-1/2 h-[1px] -translate-x-1/2 bg-primary sm:w-[90%] md:w-0"></div>
     </div>
   );
 };
