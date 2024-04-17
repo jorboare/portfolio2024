@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+//@ts-ignore
+import { Link } from "react-scroll";
 
 const Projects = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -65,14 +66,31 @@ const Projects = () => {
       <div
         className={`${isSticky ? "fixed left-[50px] top-0" : "absolute left-[50px] top-0"} justify-left projects-scroll z-40 flex h-[100svh] flex-row flex-nowrap items-center gap-24 pr-10`}
       >
-        <div className="font-accent  text-primary sm:text-[100px] md:text-[200px]">
+        <div className=" text-primary ">
           <div className="relative">
-            <h1 className="m-0 p-0 leading-tight">Projects</h1>
-            <div className="stripped absolute -right-10 top-0 h-3/4 w-2/3 opacity-70"></div>
-            <div className="dottedNoBg absolute -left-8 bottom-0 h-2/3 w-[80%]"></div>
+            <h1 className="m-0 p-0 font-accent leading-[0.8] sm:text-[100px] md:text-[200px]">
+              Projects
+            </h1>
+            <p className="relative z-40 mb-5 rounded-xl bg-background bg-opacity-50 px-5 py-3 text-primary sm:text-[18px] md:text-[18px] lg:text-[20px]">
+              <span className="text-secondAccent">Disclaimer</span>: These
+              aren't all the projects I've worked on, but they are the projects
+              I can show. The rest of them are listed above in the{" "}
+              <Link
+                to="experience"
+                smooth={true}
+                offset={1}
+                duration={500}
+                className={`cursor-pointer text-secondAccent`}
+              >
+                experience section
+              </Link>
+              .
+            </p>
+            <div className="stripped z-2' absolute -right-10 top-0 h-3/4 w-2/3 opacity-70"></div>
+            <div className="dottedNoBg absolute -left-8 bottom-0 z-20 h-2/3 w-[80%]"></div>
           </div>
           <div className="flex h-9 items-center justify-end">
-            <p className="block text-right text-xl text-secondAccent">
+            <p className="block text-right font-accent text-xl text-secondAccent">
               Keep Scrolling
             </p>
             <div className="flex h-10 items-end justify-center px-3">
