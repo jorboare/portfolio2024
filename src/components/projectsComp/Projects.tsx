@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import solanum from "../../assets/video/Solanum.mp4";
-import block from "../../assets/video/Enter the block.mp4";
-import placeholder from "../../assets/experienceImg.jpg";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -100,7 +97,12 @@ const Projects = () => {
               loop
               className="h-[105%] w-full rounded-[5%] object-cover"
             >
-              <source src={solanum} type="video/mp4" />
+              <source
+                src={
+                  "https://res.cloudinary.com/jordi-ironhack/video/upload/v1713345457/portfolio/Solanum_okxu8c.mp4"
+                }
+                type="video/mp4"
+              />
               Your browser doesn't accept videos
             </video>
           </Link>
@@ -127,7 +129,12 @@ const Projects = () => {
               loop
               className="h-[100%] w-full rounded-[5%]  object-cover object-center"
             >
-              <source src={block} type="video/mp4" />
+              <source
+                src={
+                  "https://res.cloudinary.com/jordi-ironhack/video/upload/v1713345450/portfolio/Enter_the_block_t7d0sx.mp4"
+                }
+                type="video/mp4"
+              />
               Your browser doesn't accept videos
             </video>
           </Link>
@@ -145,7 +152,9 @@ const Projects = () => {
             </p>
           </div>
           <img
-            src={placeholder}
+            src={
+              "https://res.cloudinary.com/jordi-ironhack/image/upload/v1713345444/portfolio/experienceImg_nfgxfz.png"
+            }
             className="h-[100%] w-full rounded-[5%]  object-cover object-center"
           />
         </div>

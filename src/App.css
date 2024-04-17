@@ -57,7 +57,7 @@
 }
 
 .gradient-photo {
-  background-image: url("./assets/experienceImg.jpg"); /* URL de tu imagen */
+  background-image: url("https://res.cloudinary.com/jordi-ironhack/image/upload/v1713345444/portfolio/experienceImg_nfgxfz.png"); /* URL de tu imagen */
   background-size: cover; /* Ajustar imagen al tamaño del contenedor */
   background-position: center; /* Posición de la imagen */
   background-repeat: no-repeat;

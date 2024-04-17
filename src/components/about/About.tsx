@@ -1,4 +1,3 @@
-import bgImage from "../../assets/Raphael_-_Saint_George_and_the_Dragon_-_Google_Art_Project.jpg";
 //@ts-ignore
 import ReactVivus from "react-vivus";
 
@@ -14,7 +13,9 @@ const About: React.FC<props> = (props) => {
       <div className="absolute left-0 top-0 h-full w-full">
         <img
           className={`h-full w-full object-cover object-center`}
-          src={bgImage}
+          src={
+            "https://res.cloudinary.com/jordi-ironhack/image/upload/v1713345437/portfolio/Raphael_-_Saint_George_and_the_Dragon_-_Google_Art_Project_ob4qjh.jpg"
+          }
           alt="Image of the painting Saint George from Raphael"
         ></img>
       </div>
