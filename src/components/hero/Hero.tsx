@@ -34,16 +34,18 @@ const Hero = () => {
         <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[150px]">
           Hi. <span className="m-0 block p-0">I'm Jordi.</span>
         </h1>
-        <h2 className="z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[60px]">
-          I build things for the{" "}
-          <span
-            id="webSpan"
-            className="m-0 p-0 leading-[1] text-secondAccent md:text-[48px] lg:text-[68px]"
-          >
-            web
-          </span>
-          .
-        </h2>
+        <div className="text-left sm:w-[230px] md:w-[570px] lg:w-[710px]">
+          <h2 className="z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[60px]">
+            I build things for the{" "}
+            <span
+              id="webSpan"
+              className="m-0 p-0 leading-[1] text-secondAccent md:text-[48px] lg:text-[68px]"
+            >
+              web
+            </span>
+            .
+          </h2>
+        </div>
       </div>
       <div className="absolute bottom-0 left-1/2 h-[1px] -translate-x-1/2 bg-primary sm:w-[90%] md:w-0"></div>
     </div>
