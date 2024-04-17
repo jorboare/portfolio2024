@@ -34,7 +34,7 @@ const Hero = () => {
         <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[150px]">
           Hi. <span className="m-0 block p-0">I'm Jordi.</span>
         </h1>
-        <div className="text-left sm:w-[230px] md:w-[570px] lg:w-[710px]">
+        <div className="text-left sm:w-[240px] md:w-[570px] lg:w-[710px]">
           <h2 className="z-30 m-0 p-0 font-primary text-primary sm:text-[20px] md:text-[50px] lg:text-[60px]">
             I build things for the{" "}
             <span
