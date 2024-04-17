@@ -33,7 +33,7 @@ const Contact = () => {
             <p>
               We can talk about{" "}
               <span className="font-accent text-secondAccent sm:text-[23px] md:text-[30px] lg:text-[35px]">
-                programming
+                coding
               </span>
               , but also about{" "}
               <span className="font-accent text-secondAccent sm:text-[23px] md:text-[30px] lg:text-[35px]">
