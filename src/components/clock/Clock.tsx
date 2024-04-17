@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
-
+// import hoursImg from "../../assets/stained glass window/Hours.png";
+// import minutesImg from "../../assets/stained glass window/Minutes.png";
+// import millisecondsImg from "../../assets/stained glass window/Milliseconds.png";
+// import secondsImg from "../../assets/stained glass window/Seconds.png";
 const hoursEquiv = 360 / 12;
 const minEquiv = 360 / 60;
 const secEquiv = 360 / 60;
@@ -40,7 +43,39 @@ const Clock = () => {
       element.style.transform = `rotate(${milEquiv * milliseconds}deg)`;
   }, [milliseconds]);
   return (
-    <div className="absolute right-0 top-0 z-0 flex h-[300px] w-[300px] items-center justify-center opacity-75">
+    // <div className="absolute left-1/2 top-1/2 z-0 flex h-[100%] w-[100%] -translate-x-1/2 -translate-y-1/2 items-center justify-center ">
+    //   <div className="h-full w-full">
+    //     <div className="absolute left-[50%] top-[50%] z-0 -translate-x-1/2 -translate-y-1/2 rounded-full">
+    //       <img
+    //         src={hoursImg}
+    //         id="hour"
+    //         className=" z-0 h-[100%] w-[100%] max-w-none"
+    //       ></img>
+    //       <div className="absolute left-[50%] top-[50%] z-[15] h-[75%] w-[75%] -translate-x-1/2 -translate-y-1/2">
+    //         <img
+    //           src={minutesImg}
+    //           id="minute"
+    //           className=" h-[100%] w-[100%] max-w-none"
+    //         ></img>
+    //       </div>
+    //       <div className="absolute left-[50%] top-[50%] z-[20] h-[45%]  w-[45%] -translate-x-1/2 -translate-y-1/2">
+    //         <img
+    //           src={secondsImg}
+    //           id="second"
+    //           className=" h-[100%] w-[100%] max-w-none"
+    //         ></img>
+    //       </div>
+    //       <div className="absolute left-[50%] top-[50%] z-[25] -translate-x-1/2 -translate-y-1/2">
+    //         <img
+    //           id="millisecond"
+    //           src={millisecondsImg}
+    //           className="h-[50px] w-[50px] max-w-none"
+    //         ></img>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="clock absolute right-0 top-0 z-0 flex h-[300px] w-[300px] items-center justify-center opacity-75">
       <div className="h-full w-full">
         <div className="absolute left-[50%] top-[50%] z-10 -translate-x-1/2  -translate-y-1/2">
           <div
