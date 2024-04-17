@@ -9,7 +9,7 @@ interface props {
 const MarqueeText: React.FC<props> = (props) => {
   return (
     <div
-      className="marqueeContainer max-h-16 w-full whitespace-nowrap rounded-xl border-2 border-primary text-primary hover:bg-primary hover:text-background sm:col-span-2 sm:col-start-1 sm:row-span-1 md:col-span-1 md:col-start-2"
+      className="marqueeContainer max-h-16 w-full whitespace-nowrap rounded-xl border border-primary text-primary transition-all hover:border-secondAccent hover:bg-primary hover:text-secondAccent sm:col-span-2 sm:col-start-1 sm:row-span-1 md:col-span-1 md:col-start-2"
       onClick={props.clickAction && props.clickAction}
     >
       <Link to={props.link} target="_blank">

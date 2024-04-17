@@ -15,7 +15,7 @@ const Contact = () => {
     >
       <div className="z-30 grid grid-cols-2 grid-rows-4 justify-start sm:gap-0 md:gap-10">
         <div className="relative col-start-1 w-full  sm:col-span-2 md:col-span-1 md:row-span-4 md:pl-24 ">
-          <h1 className="font-accent text-primary  sm:text-[50px] md:text-[80px] lg:text-[100px] xl:text-[150px]">
+          <h1 className="dottedRed pl-10 font-accent text-primary sm:mb-5  sm:text-[50px] md:mb-0 md:rounded-xl md:text-[80px] lg:text-[100px] xl:text-[150px]">
             Contact
           </h1>
         </div>
