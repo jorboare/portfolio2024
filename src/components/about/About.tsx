@@ -14,7 +14,7 @@ const About: React.FC<props> = (props) => {
         <img
           className={`h-full w-full object-cover object-center`}
           src={
-            "https://res.cloudinary.com/jordi-ironhack/image/upload/v1713345437/portfolio/Raphael_-_Saint_George_and_the_Dragon_-_Google_Art_Project_ob4qjh.jpg"
+            "https://res.cloudinary.com/jordi-projects/image/upload/v1713345437/portfolio/Raphael_-_Saint_George_and_the_Dragon_-_Google_Art_Project_ob4qjh.jpg"
           }
           alt="Image of the painting Saint George from Raphael"
         ></img>

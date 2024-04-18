@@ -20,7 +20,7 @@ const Contact = () => {
         className="absolute left-0 top-0 h-[100vh] w-full object-cover"
       >
         <source
-          src="https://res.cloudinary.com/jordi-ironhack/video/upload/v1713349866/portfolio/Porfolio_video_gugfe5.mp4"
+          src="https://res.cloudinary.com/jordi-projects/video/upload/v1713349866/portfolio/Porfolio_video_gugfe5.mp4"
           type="video/mp4"
         />
       </video>

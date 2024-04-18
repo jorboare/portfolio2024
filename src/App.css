@@ -57,11 +57,11 @@
 }
 
 .gradient-photo {
-  background-image: url("https://res.cloudinary.com/jordi-ironhack/image/upload/v1713345444/portfolio/experienceImg_nfgxfz.png"); /* URL de tu imagen */
-  background-size: cover; /* Ajustar imagen al tamaño del contenedor */
-  background-position: center; /* Posición de la imagen */
+  background-image: url("https://res.cloudinary.com/jordi-projects/image/upload/v1713345444/portfolio/experienceImg_nfgxfz.png"); /* URL de tu imagen */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Para posicionar el gradiente */
+  position: relative;
 }
 
 .gradient-photo::after {
