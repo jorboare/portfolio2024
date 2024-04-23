@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 //@ts-ignore
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 const Projects = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -75,7 +76,7 @@ const Projects = () => {
               <span className="text-secondAccent">Disclaimer</span>: These
               aren't all the projects I've worked on, but they are the projects
               I can show. The rest of them are listed above in the{" "}
-              <Link
+              <ScrollLink
                 to="experience"
                 smooth={true}
                 offset={1}
@@ -83,7 +84,7 @@ const Projects = () => {
                 className={`cursor-pointer text-secondAccent`}
               >
                 experience section
-              </Link>
+              </ScrollLink>
               .
             </p>
             <div className="stripped z-2' absolute -right-10 top-0 h-3/4 w-2/3 opacity-70"></div>
