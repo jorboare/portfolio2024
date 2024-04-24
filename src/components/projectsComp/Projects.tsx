@@ -139,7 +139,7 @@ const Projects = () => {
                 Enter the block
               </p>
               <p className="leading-1 text-center text-xl leading-[1]">
-                React, React-context, Styled Components
+                JavaScript, HTML Canvas
               </p>
             </div>
             <video
