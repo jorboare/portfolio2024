@@ -68,7 +68,7 @@ const Experience = () => {
         className="section relative z-40 w-full px-10 pb-10 sm:mt-[0px] sm:pt-14 md:mt-[50px] lg:mt-[120px]"
       >
         <div className="gradient-photo absolute right-0 z-0 h-full fadeInRight sm:top-0 sm:w-full md:-top-1/2 md:h-[500px] md:w-2/3 lg:h-[600px]"></div>
-        <div className="z-40 mb-10">
+        <div className="relative z-40 mb-10">
           <h1 className="fadeInLeft  z-30 p-0 font-accent leading-[10rem] text-primary sm:text-center sm:text-5xl md:text-center md:text-[150px]">
             Experience
           </h1>
