@@ -28,7 +28,7 @@ const Hero = () => {
     <div id="hero" className="section relative h-[90vh] sm:px-2 md:px-32">
       <Background />
       <h3 className="m-0 mx-2 w-full pt-2 text-center text-xl text-primary">
-        Front-end Developer
+        Full-stack Developer
       </h3>
       <div className="align-center relative z-40 mt-5 flex h-[100%] w-full flex-col items-center justify-center">
         <h1 className="z-30 m-0 p-0 font-accent text-[200px] leading-[10rem] text-primary sm:text-6xl md:text-[150px] lg:text-[150px]">

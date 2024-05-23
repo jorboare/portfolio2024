@@ -31,7 +31,7 @@ const About: React.FC<props> = (props) => {
               <span className="font-accent text-secondAccent sm:text-[23px] md:text-[30px] lg:text-[35px]">
                 +3 years
               </span>{" "}
-              experienced front-end developer from Spain based in
+              experienced full-stack developer from Spain based in
               <span className="font-accent text-secondAccent sm:text-[23px] md:text-[30px] lg:text-[35px]">
                 {" "}
                 Amsterdam
